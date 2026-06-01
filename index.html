@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Landing Page Resmi BHINNEKA RUN 2026 - Event lari nasional kolosal mengangkat nilai sportivitas, keberagaman, dan persaudaraan. Berlangsung pada 12 Juli 2026 di Plaza Keong Mas, TMII.">
+    <title>BHINNEKA RUN 2026 - Official Landing Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;800&family=Oswald:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Custom Config for Theme Integration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C62828',
+                        brandOrange: '#F57C00',
+                        brandGold: '#D4AF37',
+                        brandCream: '#FFF7E6',
+                        brandDark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        heading: ['Bebas Neue', 'Oswald', 'sans-serif'],
+                        body: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brandCream font-body text-brandDark antialiased leading-relaxed">
+
+    <!-- HEADER / NAVIGATION (STICKY NAVBAR) -->
+    <header id="navbar-container"
+        class="fixed top-0 left-0 w-full z-50 bg-white border-b border-orange-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-3">
+                    <img src="assets/images/logo-placeholder.png" alt="Logo Resmi BHINNEKA RUN 2026"
+                        class="h-12 w-auto">
+                </a>
+
+                <!-- Grouped Desktop Navigation (Regular Links & Specific Dropdowns) -->
+                <nav class="hidden xl:flex items-center space-x-8">
+                    <!-- Home -->
+                    <a href="#home"
+                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Home</a>
+
+                    <!-- Informasi Dropdown -->
+                    <div class="relative group py-4">
+                        <button type="button"
+                            class="flex items-center gap-1 text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider focus:outline-none">
+                            <span>Informasi</span>
+                            <svg class="h-4 w-4 text-brandRed group-hover:rotate-180 transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu Card (With premium red top border like the screenshot) -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 rounded-b-xl shadow-xl bg-white border-t-4 border-brandRed border-x border-b border-orange-100 hidden group-hover:block transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="#tentang"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Tentang
+                                    Event</a>
+                                <a href="#timeline"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Timeline</a>
+                                <a href="#faq"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Rundown
+                                    &amp; FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kompetisi Dropdown -->
+                    <div class="relative group py-4">
+                        <button type="button"
+                            class="flex items-center gap-1 text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider focus:outline-none">
+                            <span>Kompetisi</span>
+                            <svg class="h-4 w-4 text-brandRed group-hover:rotate-180 transition-transform duration-300"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu Card (With premium red top border like the screenshot) -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 rounded-b-xl shadow-xl bg-white border-t-4 border-brandRed border-x border-b border-orange-100 hidden group-hover:block transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="#kategori"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Kategori
+                                    Lari</a>
+                                <a href="#route"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Rute
+                                    Lintasan</a>
+                                <a href="#benefit"
+                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Benefit
+                                    Peserta</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hiburan -->
+                    <a href="#entertainment"
+                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Hiburan</a>
+
+                    <!-- Donasi (Charity) -->
+                    <a href="#charity"
+                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Donasi</a>
+
+                    <!-- Lokasi (Venue) -->
+                    <a href="#venue"
+                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Lokasi</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden xl:block">
+                    <a href="#daftar"
+                        class="bg-brandRed hover:bg-red-800 text-white font-bold py-2.5 px-6 rounded-full transition-transform hover:scale-105 inline-block text-sm tracking-wider uppercase">Daftar
+                        Sekarang</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="xl:hidden flex items-center">
+                    <button id="menu-btn" type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-brandDark hover:text-brandRed hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-brandRed"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Buka Menu Navigasi</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t border-orange-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">HOME</a>
+                <a href="#tentang"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">TENTANG</a>
+                <a href="#kategori"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">KATEGORI
+                    LARI</a>
+                <a href="#timeline"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">TIMELINE</a>
+                <a href="#route"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">RUTE</a>
+                <a href="#benefit"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">BENEFIT</a>
+                <a href="#entertainment"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">HIBURAN</a>
+                <a href="#venue"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">VENUE
+                    &amp; AKSES</a>
+                <a href="#charity"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">CHARITY</a>
+                <a href="#faq"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">FAQ</a>
+                <a href="#daftar"
+                    class="block w-full mt-2 bg-brandRed hover:bg-red-800 text-white font-bold py-3 px-4 rounded-md transition-colors">DAFTAR
+                    SEKARANG</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home"
+        class="relative pt-32 pb-24 md:pt-40 md:pb-36 gradient-merah-oranye-gold bg-motif-nusantara-dark text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Texts -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span
+                        class="inline-block bg-white bg-opacity-20 border border-white border-opacity-30 rounded-full px-4 py-1.5 text-sm font-semibold tracking-wider uppercase">Event
+                        Lari Kebangsaan &amp; Budaya</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none uppercase font-heading">
+                        Different Stories,<br><span class="text-brandGold">One Finish Line</span>
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl text-white text-opacity-90 max-w-2xl mx-auto lg:mx-0 font-body font-light">
+                        Mempersatukan 5.000 pelari dari berbagai penjuru tanah air. Menelusuri keindahan keberagaman
+                        tradisi budaya Indonesia dalam satu jalur lari yang sarat nilai nasionalisme dan gaya hidup
+                        sehat.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#daftar"
+                            class="w-full sm:w-auto bg-brandGold hover:bg-yellow-500 text-brandDark font-bold py-4 px-8 rounded-full shadow-lg transition-transform hover:scale-105 text-center uppercase tracking-wider">Daftar
+                            Sekarang</a>
+                        <a href="#kategori"
+                            class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-brandRed font-bold py-4 px-8 rounded-full transition-all text-center uppercase tracking-wider">Lihat
+                            Kategori</a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual & Countdown Card -->
+                <div class="lg:col-span-5 flex flex-col items-center">
+                    <div
+                        class="bg-white rounded-2xl p-6 sm:p-8 text-brandDark shadow-2xl w-full max-w-md border border-orange-100 relative">
+                        <div
+                            class="absolute -top-4 -right-4 bg-brandRed text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-bounce uppercase">
+                            Slot Terbatas!
+                        </div>
+                        <h2
+                            class="text-center font-heading text-2xl font-bold tracking-wider text-brandRed mb-1 uppercase">
+                            Menuju Hari Pelaksanaan</h2>
+                        <p class="text-center text-xs font-semibold text-gray-500 mb-6 uppercase tracking-wider">Minggu,
+                            12 Juli 2026 | Plaza Keong Mas, TMII</p>
+
+                        <!-- Countdown Grid -->
+                        <div id="timer-container" class="grid grid-cols-4 gap-3 text-center">
+                            <div class="bg-brandCream rounded-xl p-3 border border-orange-100">
+                                <span id="timer-days"
+                                    class="block font-heading text-4xl font-bold text-brandRed">00</span>
+                                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Hari</span>
+                            </div>
+                            <div class="bg-brandCream rounded-xl p-3 border border-orange-100">
+                                <span id="timer-hours"
+                                    class="block font-heading text-4xl font-bold text-brandRed">00</span>
+                                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Jam</span>
+                            </div>
+                            <div class="bg-brandCream rounded-xl p-3 border border-orange-100">
+                                <span id="timer-minutes"
+                                    class="block font-heading text-4xl font-bold text-brandRed">00</span>
+                                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Menit</span>
+                            </div>
+                            <div class="bg-brandCream rounded-xl p-3 border border-orange-100">
+                                <span id="timer-seconds"
+                                    class="block font-heading text-4xl font-bold text-brandRed">00</span>
+                                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Detik</span>
+                            </div>
+                        </div>
+                        <p id="timer-message" class="text-center text-xs font-bold text-brandRed mt-4 hidden"></p>
+
+                        <!-- Highlight details -->
+                        <div class="mt-6 pt-6 border-t border-orange-100 space-y-3">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500 font-medium">Target Pelari:</span>
+                                <span class="font-bold text-brandDark">5.000 Runners</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500 font-medium">Lokasi:</span>
+                                <span class="font-bold text-brandDark text-right">Plaza Keong Mas, TMII</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SECTION -->
+    <section id="tentang" class="py-20 bg-brandCream bg-motif-nusantara">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Misi &amp; Semangat
+                    Kebangsaan</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Tentang Bhinneka Run 2026</h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-700 text-lg leading-relaxed pt-2">
+                    Lari bukan hanya tentang kecepatan menuju garis finish, tetapi merupakan jembatan persaudaraan yang
+                    merajut keragaman nusantara. BHINNEKA RUN 2026 adalah ajang lari rekreasional nasional yang
+                    dirancang khusus untuk memadukan budaya lokal, sportivitas, dan komitmen sosial di bawah satu
+                    semangat kepedulian bersama.
+                </p>
+            </div>
+
+            <!-- Event Details Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Race Day -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center text-brandRed mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Race Day</h3>
+                    <p class="text-gray-600 text-sm mb-4">Pelaksanaan balapan utama secara serentak.</p>
+                    <p class="font-bold text-brandRed text-lg">Minggu, 12 Juli 2026</p>
+                </div>
+
+                <!-- Card 2: Waktu -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div
+                        class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center text-brandOrange mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Waktu Pelaksanaan</h3>
+                    <p class="text-gray-600 text-sm mb-4">Dimulai dari pembukaan hingga seremonial penghargaan.</p>
+                    <p class="font-bold text-brandOrange text-lg">05.00 – 10.00 WIB</p>
+                </div>
+
+                <!-- Card 3: Venue -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div
+                        class="h-12 w-12 bg-yellow-100 rounded-lg flex items-center justify-center text-brandGold mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Venue Kegiatan</h3>
+                    <p class="text-gray-600 text-sm mb-4">Pusat lokasi start, finish, dan festival kebudayaan.</p>
+                    <p class="font-bold text-brandDark text-lg">Plaza Keong Mas, TMII</p>
+                </div>
+
+                <!-- Card 4: Target Peserta -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center text-brandRed mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Target Peserta</h3>
+                    <p class="text-gray-600 text-sm mb-4">Kapasitas aman jalur lari demi kenyamanan bersama.</p>
+                    <p class="font-bold text-brandRed text-lg">5.000 Pelari Nasional</p>
+                </div>
+
+                <!-- Card 5: Open Gate -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div
+                        class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center text-brandOrange mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Open Gate</h3>
+                    <p class="text-gray-600 text-sm mb-4">Dimulainya akses masuk area race village untuk pelari.</p>
+                    <p class="font-bold text-brandOrange text-lg">04.00 WIB Pagi</p>
+                </div>
+
+                <!-- Card 6: Pengambilan RPC -->
+                <div class="bg-white rounded-xl p-8 border border-orange-100 shadow-md hover-glow">
+                    <div
+                        class="h-12 w-12 bg-yellow-100 rounded-lg flex items-center justify-center text-brandGold mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2 uppercase">Race Pack Collection</h3>
+                    <p class="text-gray-600 text-sm mb-4">Waktu verifikasi data dan pengambilan kelengkapan lari.</p>
+                    <p class="font-bold text-brandDark text-lg">10 – 11 Juli 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATEGORI LARI SECTION -->
+    <section id="kategori" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Klasifikasi Kompetisi</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Kategori &amp; Biaya Registrasi
+                </h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-600 text-lg leading-relaxed pt-2">
+                    Tersedia tiga jenis jarak lari resmi yang disesuaikan dengan tingkat kebugaran Anda, mulai dari
+                    pelari pemula hingga atlet profesional.
+                </p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20">
+                <!-- 3K Card -->
+                <div
+                    class="bg-brandCream rounded-2xl p-8 border border-orange-200 shadow-md flex flex-col justify-between hover-glow">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="bg-orange-200 text-brandOrange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fun
+                                Run</span>
+                            <span class="text-gray-500 text-xs font-medium">Kuota 1.000</span>
+                        </div>
+                        <h3 class="font-heading text-4xl font-extrabold text-brandDark">KATEGORI 3K</h3>
+                        <p class="text-gray-600 text-sm">Sangat cocok untuk keluarga, anak-anak, dan pelari pemula yang
+                            mengutamakan kegembiraan.</p>
+                        <div class="pt-4 border-t border-orange-100">
+                            <span class="text-gray-400 text-xs block uppercase">Biaya Registrasi</span>
+                            <span class="font-heading text-4xl font-bold text-brandRed">Rp 75.000</span>
+                        </div>
+                        <ul class="space-y-2 pt-4 text-sm text-gray-700">
+                            <li class="flex items-center gap-2">✓ Cut-Off Time (COT): 60 Menit</li>
+                            <li class="flex items-center gap-2">✓ Finisher Medal (Bronze)</li>
+                            <li class="flex items-center gap-2">✓ Jersey Peserta Premium</li>
+                            <li class="flex items-center gap-2">✓ Akses Area Race Village</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#daftar"
+                            class="block w-full bg-brandDark hover:bg-black text-white font-bold py-3 px-4 rounded-xl text-center transition-colors uppercase text-sm tracking-wider">Pilih
+                            Kategori</a>
+                    </div>
+                </div>
+
+                <!-- 5K Card (Recommended) -->
+                <div
+                    class="bg-white rounded-2xl p-8 border-2 border-brandRed shadow-xl flex flex-col justify-between relative transform lg:-translate-y-2 hover-glow">
+                    <div
+                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brandRed text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                        Terpopuler
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="bg-red-100 text-brandRed text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">National
+                                Run</span>
+                            <span class="text-gray-500 text-xs font-medium">Kuota 2.500</span>
+                        </div>
+                        <h3 class="font-heading text-4xl font-extrabold text-brandDark">KATEGORI 5K</h3>
+                        <p class="text-gray-600 text-sm">Menantang kemampuan fisik dengan jarak menengah dengan rute
+                            kebudayaan yang dinamis.</p>
+                        <div class="pt-4 border-t border-orange-100">
+                            <span class="text-gray-400 text-xs block uppercase">Biaya Registrasi</span>
+                            <span class="font-heading text-4xl font-bold text-brandRed">Rp 125.000</span>
+                        </div>
+                        <ul class="space-y-2 pt-4 text-sm text-gray-700">
+                            <li class="flex items-center gap-2">✓ Cut-Off Time (COT): 90 Menit</li>
+                            <li class="flex items-center gap-2">✓ Finisher Medal (Silver)</li>
+                            <li class="flex items-center gap-2">✓ Jersey Peserta Premium</li>
+                            <li class="flex items-center gap-2">✓ RFID Timing Chip Terintegrasi</li>
+                            <li class="flex items-center gap-2">✓ Akses Area Race Village</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#daftar"
+                            class="block w-full bg-brandRed hover:bg-red-800 text-white font-bold py-3 px-4 rounded-xl text-center transition-colors uppercase text-sm tracking-wider">Pilih
+                            Kategori</a>
+                    </div>
+                </div>
+
+                <!-- 10K Card -->
+                <div
+                    class="bg-brandCream rounded-2xl p-8 border border-orange-200 shadow-md flex flex-col justify-between hover-glow">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="bg-yellow-200 text-brandOrange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Challenge
+                                Run</span>
+                            <span class="text-gray-500 text-xs font-medium">Kuota 1.500</span>
+                        </div>
+                        <h3 class="font-heading text-4xl font-extrabold text-brandDark">KATEGORI 10K</h3>
+                        <p class="text-gray-600 text-sm">Ajang kompetisi utama berstandar nasional bagi para pelari
+                            terlatih memperebutkan podium juara.</p>
+                        <div class="pt-4 border-t border-orange-100">
+                            <span class="text-gray-400 text-xs block uppercase">Biaya Registrasi</span>
+                            <span class="font-heading text-4xl font-bold text-brandRed">Rp 150.000</span>
+                        </div>
+                        <ul class="space-y-2 pt-4 text-sm text-gray-700">
+                            <li class="flex items-center gap-2">✓ Cut-Off Time (COT): 120 Menit</li>
+                            <li class="flex items-center gap-2">✓ Finisher Medal (Gold)</li>
+                            <li class="flex items-center gap-2">✓ Jersey Peserta Premium</li>
+                            <li class="flex items-center gap-2">✓ RFID Timing Chip Terintegrasi</li>
+                            <li class="flex items-center gap-2">✓ Akses Perebutan Hadiah Podium</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#daftar"
+                            class="block w-full bg-brandDark hover:bg-black text-white font-bold py-3 px-4 rounded-xl text-center transition-colors uppercase text-sm tracking-wider">Pilih
+                            Kategori</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Podium Prize Details -->
+            <div class="bg-brandCream rounded-2xl p-6 sm:p-10 border border-orange-200 shadow-lg">
+                <h3 class="font-heading text-3xl font-bold text-brandRed mb-6 uppercase text-center sm:text-left">Detail
+                    Hadiah Podium Juara</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-orange-200 text-sm">
+                        <thead class="bg-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left font-bold text-brandDark uppercase tracking-wider">
+                                    Klasifikasi Kategori</th>
+                                <th class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider">
+                                    Juara 1</th>
+                                <th class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider">
+                                    Juara 2</th>
+                                <th class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider">
+                                    Juara 3</th>
+                                <th class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider">
+                                    Juara 4</th>
+                                <th class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider">
+                                    Juara 5</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-orange-100 bg-white bg-opacity-60">
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-brandDark">10K Open (M/F)</td>
+                                <td class="px-6 py-4 text-center font-semibold text-brandRed">Rp 5.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 4.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 3.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.500.000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-brandDark">10K Master (M/F)</td>
+                                <td class="px-6 py-4 text-center font-semibold text-brandRed">Rp 5.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 4.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 3.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.500.000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-brandDark">5K Open (M/F)</td>
+                                <td class="px-6 py-4 text-center font-semibold text-brandRed">Rp 3.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-bold text-brandDark">5K Master (M/F)</td>
+                                <td class="px-6 py-4 text-center font-semibold text-brandRed">Rp 3.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 2.000.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.500.000</td>
+                                <td class="px-6 py-4 text-center">Rp 1.000.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Best Costume Note -->
+                <div
+                    class="mt-8 p-4 bg-orange-100 rounded-xl border border-orange-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h4 class="font-heading text-lg font-bold text-brandOrange uppercase">Kontes Tambahan: Best
+                            Costume Competition</h4>
+                        <p class="text-xs text-gray-700">Kenakan pakaian adat nusantara atau kostum kreatif yang
+                            bertemakan persatuan kebhinekaan.</p>
+                    </div>
+                    <div class="bg-white rounded-lg px-4 py-2 border border-brandGold text-center">
+                        <span class="text-[10px] text-gray-500 uppercase block font-bold">Total Apresiasi</span>
+                        <span class="font-heading text-xl font-bold text-brandRed">Rp 1.500.000 <span
+                                class="text-xs font-body font-normal text-gray-600">/ 10 Pemenang</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="py-20 bg-brandCream bg-motif-nusantara">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Alur Perjalanan Event</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Event Timeline &amp; Milestone
+                </h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-700 text-lg leading-relaxed pt-2">
+                    Ikuti setiap fase krusial pelaksanaan kegiatan dari masa sosialisasi pendaftaran hingga hari puncak
+                    pelaksanaan lomba.
+                </p>
+            </div>
+
+            <!-- Desktop Timeline (Horizontal) -->
+            <div class="hidden md:block timeline-line mb-10 pt-4 pb-12">
+                <div class="grid grid-cols-5 text-center">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-dot space-y-3 px-4">
+                        <span
+                            class="bg-white text-xs font-bold text-brandRed border border-red-200 px-3 py-1 rounded-full uppercase shadow-sm">Kick-Off</span>
+                        <h4 class="font-heading text-xl font-bold pt-4 text-brandDark">02 Juni 2026</h4>
+                        <p class="text-xs text-gray-600">Sosialisasi event perdana &amp; publikasi detail acara secara
+                            resmi.</p>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-dot space-y-3 px-4">
+                        <span
+                            class="bg-white text-xs font-bold text-brandOrange border border-orange-200 px-3 py-1 rounded-full uppercase shadow-sm">Open
+                            Reg</span>
+                        <h4 class="font-heading text-xl font-bold pt-4 text-brandDark">05 Juni 2026</h4>
+                        <p class="text-xs text-gray-600">Pembukaan sistem pendaftaran daring melalui tautan resmi
+                            dTiketin.</p>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-dot space-y-3 px-4">
+                        <span
+                            class="bg-white text-xs font-bold text-brandOrange border border-orange-200 px-3 py-1 rounded-full uppercase shadow-sm">Pre-Event</span>
+                        <h4 class="font-heading text-xl font-bold pt-4 text-brandDark">14 &amp; 28 Juni 2026</h4>
+                        <p class="text-xs text-gray-600">Pelaksanaan sosialisasi lari bersama (community run) pra-acara.
+                        </p>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-dot space-y-3 px-4">
+                        <span
+                            class="bg-brandGold text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-sm">RPC
+                            Days</span>
+                        <h4 class="font-heading text-xl font-bold pt-4 text-brandDark">10 – 11 Juli 2026</h4>
+                        <p class="text-xs text-gray-600">Pengambilan Race Pack resmi di gerai area Plaza Keong Mas TMII.
+                        </p>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="timeline-dot space-y-3 px-4">
+                        <span
+                            class="bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-sm">Race
+                            Day</span>
+                        <h4 class="font-heading text-xl font-bold pt-4 text-brandDark">12 Juli 2026</h4>
+                        <p class="text-xs text-gray-600">Hari pelaksanaan balapan utama, festival budaya, &amp;
+                            pembagian hadiah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Timeline (Vertical) -->
+            <div class="block md:hidden timeline-line-vertical space-y-8 pl-4">
+                <!-- Milestone 1 -->
+                <div class="timeline-dot-mobile relative pl-12">
+                    <span
+                        class="inline-block bg-white text-xs font-bold text-brandRed border border-red-200 px-3 py-1 rounded-full uppercase shadow-sm">Kick-Off</span>
+                    <h4 class="font-heading text-2xl font-bold text-brandDark mt-1">02 Juni 2026</h4>
+                    <p class="text-sm text-gray-600 mt-1">Sosialisasi event perdana &amp; publikasi detail acara secara
+                        resmi.</p>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-dot-mobile relative pl-12">
+                    <span
+                        class="inline-block bg-white text-xs font-bold text-brandOrange border border-orange-200 px-3 py-1 rounded-full uppercase shadow-sm">Open
+                        Reg</span>
+                    <h4 class="font-heading text-2xl font-bold text-brandDark mt-1">05 Juni 2026</h4>
+                    <p class="text-sm text-gray-600 mt-1">Pembukaan sistem pendaftaran daring melalui tautan resmi
+                        dTiketin.</p>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-dot-mobile relative pl-12">
+                    <span
+                        class="inline-block bg-white text-xs font-bold text-brandOrange border border-orange-200 px-3 py-1 rounded-full uppercase shadow-sm">Pre-Event</span>
+                    <h4 class="font-heading text-2xl font-bold text-brandDark mt-1">14 &amp; 28 Juni 2026</h4>
+                    <p class="text-sm text-gray-600 mt-1">Pelaksanaan sosialisasi lari bersama (community run)
+                        pra-acara.</p>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="timeline-dot-mobile relative pl-12">
+                    <span
+                        class="inline-block bg-brandGold text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-sm">RPC
+                        Days</span>
+                    <h4 class="font-heading text-2xl font-bold text-brandDark mt-1">10 – 11 Juli 2026</h4>
+                    <p class="text-sm text-gray-600 mt-1">Pengambilan Race Pack resmi di gerai area Plaza Keong Mas
+                        TMII.</p>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="timeline-dot-mobile relative pl-12">
+                    <span
+                        class="inline-block bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-sm">Race
+                        Day</span>
+                    <h4 class="font-heading text-2xl font-bold text-brandDark mt-1">12 Juli 2026</h4>
+                    <p class="text-sm text-gray-600 mt-1">Hari pelaksanaan balapan utama, festival budaya, &amp;
+                        pembagian hadiah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RUTE LARI SECTION -->
+    <section id="route" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Jalur Lintasan Lari</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Peta Rute &amp; Pos Fasilitas
+                </h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-600 text-lg leading-relaxed pt-2">
+                    Gunakan selektor tab di bawah untuk melihat rincian jalur lintasan, penempatan water station, dan
+                    lokasi tim medis cadangan pada masing-masing kategori.
+                </p>
+            </div>
+
+            <!-- Tab Controls -->
+            <div class="flex items-center justify-center gap-4 mb-10">
+                <button type="button"
+                    class="tab-btn bg-[#C62828] text-white font-bold py-3 px-6 rounded-full border border-orange-200 transition-all hover:scale-105 uppercase tracking-wider text-sm shadow-md"
+                    data-tab="3k">Rute 3K</button>
+                <button type="button"
+                    class="tab-btn bg-white text-[#1A1A1A] font-bold py-3 px-6 rounded-full border border-orange-200 transition-all hover:scale-105 uppercase tracking-wider text-sm shadow-md"
+                    data-tab="5k">Rute 5K</button>
+                <button type="button"
+                    class="tab-btn bg-white text-[#1A1A1A] font-bold py-3 px-6 rounded-full border border-orange-200 transition-all hover:scale-105 uppercase tracking-wider text-sm shadow-md"
+                    data-tab="10k">Rute 10K</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="bg-brandCream rounded-2xl p-4 sm:p-8 border border-orange-200 shadow-lg">
+                <!-- Content 3K -->
+                <div id="route-3k" class="tab-content active">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8">
+                            <img src="assets/images/route-3k-placeholder.jpg" alt="Peta Rute Lari Kategori 3K"
+                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                        </div>
+                        <div class="lg:col-span-4 space-y-4">
+                            <h4 class="font-heading text-3xl font-bold text-brandOrange uppercase">Rincian Rute Lintasan
+                                3K</h4>
+                            <p class="text-sm text-gray-700">Rute rekreasional mengitari jalur aspal luar Danau Arsipel,
+                                didesain datar tanpa elevasi ekstrem guna kenyamanan pelari pemula maupun anak-anak.</p>
+                            <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Jarak Riil:</span>
+                                    <span class="font-bold text-brandDark">3.00 Kilometer</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Water Station:</span>
+                                    <span class="font-bold text-brandDark">1 Titik (KM 1.5)</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Pos Medis:</span>
+                                    <span class="font-bold text-brandDark">1 Titik (Samping Danau)</span>
+                                </div>
+                                <div class="flex justify-between pb-1">
+                                    <span class="text-gray-500">Cheering Zone:</span>
+                                    <span class="font-bold text-brandDark">1 Titik Atraksi Musik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 5K -->
+                <div id="route-5k" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8">
+                            <img src="assets/images/route-5k-placeholder.jpg" alt="Peta Rute Lari Kategori 5K"
+                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                        </div>
+                        <div class="lg:col-span-4 space-y-4">
+                            <h4 class="font-heading text-3xl font-bold text-brandRed uppercase">Rincian Rute Lintasan 5K
+                            </h4>
+                            <p class="text-sm text-gray-700">Rute melingkar dengan titik lintasan melewati Istana
+                                Anak-Anak Indonesia menuju arah anjungan daerah Sumatera dan berputar di kawasan Taman
+                                Burung.</p>
+                            <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Jarak Riil:</span>
+                                    <span class="font-bold text-brandDark">5.00 Kilometer</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Water Station:</span>
+                                    <span class="font-bold text-brandDark">2 Titik (KM 2 &amp; KM 4)</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Pos Medis:</span>
+                                    <span class="font-bold text-brandDark">2 Titik Kesiapsiagaan</span>
+                                </div>
+                                <div class="flex justify-between pb-1">
+                                    <span class="text-gray-500">Cheering Zone:</span>
+                                    <span class="font-bold text-brandDark">2 Titik Paguyuban Budaya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 10K -->
+                <div id="route-10k" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8">
+                            <img src="assets/images/route-10k-placeholder.jpg" alt="Peta Rute Lari Kategori 10K"
+                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                        </div>
+                        <div class="lg:col-span-4 space-y-4">
+                            <h4 class="font-heading text-3xl font-bold text-brandGold uppercase">Rincian Rute Lintasan
+                                10K</h4>
+                            <p class="text-sm text-gray-700">Rute kompetisi tersertifikasi yang menelusuri seluruh
+                                lingkar luar kompleks TMII, menyajikan tantangan elevasi tanjakan landai dan belokan
+                                dinamis.</p>
+                            <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Jarak Riil:</span>
+                                    <span class="font-bold text-brandDark">10.00 Kilometer</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Water Station:</span>
+                                    <span class="font-bold text-brandDark">3 Titik Distribusi Logistik</span>
+                                </div>
+                                <div class="flex justify-between border-b border-orange-100 pb-1">
+                                    <span class="text-gray-500">Pos Medis:</span>
+                                    <span class="font-bold text-brandDark">2 Unit Ambulans &amp; Pos Tetap</span>
+                                </div>
+                                <div class="flex justify-between pb-1">
+                                    <span class="text-gray-500">Cheering Zone:</span>
+                                    <span class="font-bold text-brandDark">4 Titik Seni Pertunjukan Kolosal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS & KEUNTUNGAN SECTION -->
+    <section id="benefit" class="py-20 bg-brandCream bg-motif-nusantara">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Keistimewaan Kepesertaan</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Fasilitas &amp; Keuntungan
+                    Peserta</h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-700 text-lg leading-relaxed pt-2">
+                    Setiap pelari terdaftar secara resmi berhak mendapatkan paket fasilitas lomba bernilai tinggi untuk
+                    menunjang kenyamanan berlari.
+                </p>
+            </div>
+
+            <!-- Benefit Cards Grid (8 benefits) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Benefit 1 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🏅</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Medali Finisher</h4>
+                    <p class="text-xs text-gray-600">Medali logam eksklusif berukir motif nusantara khas bagi pelari
+                        yang menyelesaikan rute.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">👕</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Jersey Eksklusif</h4>
+                    <p class="text-xs text-gray-600">Bahan Dry-Fit premium penyerap keringat optimal dengan pola warna
+                        khusus kategori.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🎫</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Nomor Dada (BIB)</h4>
+                    <p class="text-xs text-gray-600">Nomor dada identifikasi khusus pelari tahan air dengan informasi
+                        profil kesehatan ringkas.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">⏱️</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">RFID Timing Chip</h4>
+                    <p class="text-xs text-gray-600">Sensor perekam waktu tempuh akurat terintegrasi (khusus kategori 5K
+                        &amp; 10K).</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🍌</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Refreshment Pack</h4>
+                    <p class="text-xs text-gray-600">Pemberian air mineral, minuman elektrolit penyeimbang stamina, buah
+                        pisang, dan snack nutrisi.</p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🎪</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Race Village Access</h4>
+                    <p class="text-xs text-gray-600">Akses penuh menuju tenda kuliner tradisional, loker penyimpanan
+                        barang, serta tenda pemulihan fisik.</p>
+                </div>
+
+                <!-- Benefit 7 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🎁</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Undian Doorprize</h4>
+                    <p class="text-xs text-gray-600">Kesempatan memenangkan puluhan hadiah elektronik menarik bernilai
+                        belasan juta rupiah.</p>
+                </div>
+
+                <!-- Benefit 8 -->
+                <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm text-center hover-glow">
+                    <span class="text-2xl block mb-3">🎭</span>
+                    <h4 class="font-heading text-xl font-bold mb-2">Atraksi Kebudayaan</h4>
+                    <p class="text-xs text-gray-600">Hiburan pertunjukan seni kolosal di panggung utama festival budaya
+                        penutupan acara.</p>
+                </div>
+            </div>
+
+            <!-- Medal & Jersey Preview Grid -->
+            <div class="space-y-8">
+                <h3 class="font-heading text-3xl font-bold text-brandRed text-center uppercase">Pratinjau Desain Jersey
+                    &amp; Medali Finisher</h3>
+
+                <!-- Carousel-like grid showing jerseys and medals -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Preview 10K (Gold) -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                        <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
+                            <div class="p-2"><img src="assets/images/jersey-10k-placeholder.jpg"
+                                    alt="Preview Jersey Kategori 10K" class="w-full h-auto"></div>
+                            <div class="p-2"><img src="assets/images/medal-gold-placeholder.jpg"
+                                    alt="Preview Medali Emas Kategori 10K" class="w-full h-auto"></div>
+                        </div>
+                        <div class="p-6 text-center space-y-2">
+                            <span
+                                class="bg-yellow-100 text-brandOrange text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Kategori
+                                10K</span>
+                            <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Jersey &amp; Medal Emas
+                            </h4>
+                            <p class="text-xs text-gray-600">Paket eksklusif bermotif benang tenun emas nusantara khusus
+                                pelari rute kompetisi utama.</p>
+                        </div>
+                    </div>
+
+                    <!-- Preview 5K (Silver) -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                        <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
+                            <div class="p-2"><img src="assets/images/jersey-5k-placeholder.jpg"
+                                    alt="Preview Jersey Kategori 5K" class="w-full h-auto"></div>
+                            <div class="p-2"><img src="assets/images/medal-silver-placeholder.jpg"
+                                    alt="Preview Medali Perak Kategori 5K" class="w-full h-auto"></div>
+                        </div>
+                        <div class="p-6 text-center space-y-2">
+                            <span
+                                class="bg-red-100 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Kategori
+                                5K</span>
+                            <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Jersey &amp; Medal
+                                Perak</h4>
+                            <p class="text-xs text-gray-600">Desain gradasi merah menyala berpadu kalung medali paduan
+                                perak berukir megah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Preview 3K (Bronze) -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                        <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
+                            <div class="p-2"><img src="assets/images/jersey-3k-placeholder.jpg"
+                                    alt="Preview Jersey Kategori 3K" class="w-full h-auto"></div>
+                            <div class="p-2"><img src="assets/images/medal-bronze-placeholder.jpg"
+                                    alt="Preview Medali Perunggu Kategori 3K" class="w-full h-auto"></div>
+                        </div>
+                        <div class="p-6 text-center space-y-2">
+                            <span
+                                class="bg-orange-100 text-brandOrange text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Kategori
+                                3K</span>
+                            <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Jersey &amp; Medal
+                                Perunggu</h4>
+                            <p class="text-xs text-gray-600">Nuansa orange surya ceria berpadu aksen medali tembaga
+                                solid ramah keluarga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIBURAN & KEBUDAYAAN SECTION -->
+    <section id="entertainment" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Kesenian Tradisional Sepanjang
+                    Rute</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Hiburan &amp; Kebudayaan
+                    Nusantara</h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-600 text-lg leading-relaxed pt-2">
+                    Sebanyak 9 atraksi pertunjukan seni kolosal tradisional tersebar rapi di area panggung utama serta
+                    cheering zone lintasan rute lari untuk menyemangati langkah kaki Anda.
+                </p>
+            </div>
+
+            <!-- Grid 9 Cards of Entertainment -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Tari Pendet Bali" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">1. Tari Pendet Bali</h4>
+                        <p class="text-xs text-gray-600">Gerakan mata yang dinamis dan taburan bunga selamat datang khas
+                            Pulau Dewata menyambut para pelari di cheering zone pertama.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Rampak Bedug Banten" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">2. Rampak Bedug Banten</h4>
+                        <p class="text-xs text-gray-600">Dentuman bertalu-talu dari bedug besar pemacu ritme langkah
+                            kaki dan adrenaline pelari di tengah lintasan tanjakan.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Medley Nusantara" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">3. Medley Nusantara</h4>
+                        <p class="text-xs text-gray-600">Kolaborasi perpaduan paduan suara dan tarian medley kompilasi
+                            lagu-lagu daerah nasional di area panggung utama.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Reog Ponorogo" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">4. Reog Ponorogo</h4>
+                        <p class="text-xs text-gray-600">Pertunjukan kolosal barongan singa berhias bulu merak dengan
+                            tarian mistis penambah kekuatan moral di KM 8.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Angklung Interaktif" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">5. Angklung Sunda</h4>
+                        <p class="text-xs text-gray-600">Harmonisasi alunan alat musik bambu Jawa Barat yang menenangkan
+                            pikiran pelari sepanjang rute aspal sejuk Danau.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Tanjidor Betawi" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">6. Tanjidor Betawi</h4>
+                        <p class="text-xs text-gray-600">Musik tiup perkusi dinamis khas Betawi menyemarakkan area rest
+                            area kilometer 3 untuk melepas lelah sementara.</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Kuda Lumping" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">7. Kuda Lumping</h4>
+                        <p class="text-xs text-gray-600">Atraksi tari keprajuritan berkuda anyaman bambu khas Jawa
+                            Tengah yang menyuguhkan kelincahan gerak dinamis.</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Tor-Tor Batak" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">8. Tor-Tor Batak</h4>
+                        <p class="text-xs text-gray-600">Tarian seremonial kebersamaan dari Sumatera Utara beriringkan
+                            hentakan musik gondang yang sakral di garis finish.</p>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div
+                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
+                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
+                            alt="Barongsai Akrobatik" class="w-full h-32 object-cover rounded-lg"></div>
+                    <div class="p-6 space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">9. Barongsai Akrobat</h4>
+                        <p class="text-xs text-gray-600">Simbol persatuan akulturasi budaya yang menyuguhkan lompatan
+                            tinggi enerjik penambah sukacita keramaian event.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANDUAN AKSES LOKASI SECTION -->
+    <section id="venue" class="py-20 bg-brandCream bg-motif-nusantara">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Lokasi Kegiatan &amp;
+                    Akomodasi</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Panduan Akses &amp; Fasilitas
+                    Venue</h2>
+                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
+                <p class="text-gray-700 text-lg leading-relaxed pt-2">
+                    Demi kelancaran perjalanan Anda menuju lokasi start di Plaza Keong Mas TMII, harap pelajari akses
+                    transportasi, letak zonasi parkir resmi, serta akomodasi penginapan terdekat.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Info List -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Transportasi Umum -->
+                    <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed mb-3 uppercase">🚆 Rute Transportasi
+                            Umum</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><span class="font-bold text-brandOrange">Transjakarta:</span> Gunakan koridor Rute 7D
+                                langsung turun di pintu Gerbang Utama TMII.</li>
+                            <li><span class="font-bold text-brandOrange">LRT Jabodebek:</span> Turun di Stasiun LRT
+                                TMII, dilanjutkan dengan shuttle bus/taksi online menuju Plaza Keong Mas.</li>
+                            <li><span class="font-bold text-brandOrange">LRT Kampung Rambutan:</span> Opsi transit
+                                alternatif jarak dekat bagi penumpang kereta luar kota.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Zonasi Parkir -->
+                    <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm">
+                        <h4 class="font-heading text-2xl font-bold text-brandOrange mb-3 uppercase">🅿️ Kantong Parkir
+                            Resmi (5 Lokasi)</h4>
+                        <ul class="space-y-1.5 text-sm text-gray-700">
+                            <li>1. Gedung Parkir Bertingkat (Elevated Parking) TMII</li>
+                            <li>2. Lahan Parkir Padepokan Pencak Silat</li>
+                            <li>3. Area Parkir Masjid At-Tin</li>
+                            <li>4. Lahan Terbuka Plaza Selatan &amp; Plaza Barat TMII</li>
+                        </ul>
+                        <p class="text-[10px] text-brandRed font-bold mt-3 uppercase">Disarankan hadir sebelum pukul
+                            04.30 WIB untuk menghindari penutupan jalan internal.</p>
+                    </div>
+
+                    <!-- Akomodasi & Medis -->
+                    <div class="bg-white rounded-xl p-6 border border-orange-100 shadow-sm">
+                        <h4 class="font-heading text-2xl font-bold text-brandDark mb-3 uppercase">🏥 Layanan Darurat
+                            &amp; Akomodasi</h4>
+                        <p class="text-xs text-gray-600 mb-2 font-bold uppercase">Rumah Sakit Rujukan Terdekat:</p>
+                        <p class="text-sm text-gray-700 mb-3">RSU Adhyaksa (Pusat Trauma Resmi) &amp; RS Brawijaya
+                            Travoy Jagorawi.</p>
+                        <p class="text-xs text-gray-600 mb-2 font-bold uppercase">Rekomendasi Hotel Sekitar (Akomodasi):
+                        </p>
+                        <p class="text-sm text-gray-700">Oakwood Terrace TMII &amp; Yellow Bee Resort Cilangkap (Jarak
+                            tempuh di bawah 10 menit).</p>
+                    </div>
+                </div>
+
+                <!-- Venue Map Image -->
+                <div class="lg:col-span-7">
+                    <div
+                        class="bg-white rounded-2xl p-4 border border-orange-200 shadow-md h-full flex flex-col justify-between">
+                        <img src="assets/images/venue-placeholder.jpg"
+                            alt="Peta Lokasi Plaza Keong Mas TMII dan Akses Parkir"
+                            class="w-full h-auto rounded-xl object-cover border border-orange-100 flex-grow">
+                        <div class="pt-4 text-center">
+                            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Peta Tata Letak
+                                Akses Plaza Keong Mas TMII</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTRIBUSI SOSIAL (CHARITY) SECTION -->
+    <section id="charity" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Charity Text Descriptions -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Misi Kemanusiaan Lintas
+                        Garis Finish</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Kontribusi Sosial Kepedulian
+                        Bersama</h2>
+                    <div class="h-1 w-24 bg-brandRed"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed pt-2">
+                        Sebanyak <span class="font-bold text-brandRed">70% dari sisa hasil bersih pendaftaran</span>
+                        peserta akan dikonversikan secara langsung untuk pengadaan buku edukasi anak-anak jalanan di
+                        bawah naungan yayasan sosial nasional. Sedangkan <span class="font-bold text-brandOrange">30%
+                            sisanya</span> dialokasikan untuk distribusi suplai buah segar dan susu bernutrisi bagi
+                        anak-anak penderita stunting di wilayah sekitar Jakarta Timur.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        Dengan berpartisipasi di BHINNEKA RUN 2026, setiap langkah kaki Anda tidak hanya berkontribusi
+                        bagi kesehatan pribadi, tetapi turut memberikan secercah harapan bagi masa depan generasi
+                        penerus bangsa.
+                    </p>
+                </div>
+
+                <!-- Charity Progress Bar Representation -->
+                <div class="lg:col-span-5">
+                    <div class="bg-brandCream rounded-2xl p-8 border border-orange-200 shadow-lg space-y-6">
+                        <h3 class="font-heading text-2xl font-bold text-brandDark uppercase text-center">Rincian Alokasi Distribusi Donasi</h3>
+
+                        <div class="space-y-6">
+                            <!-- Progress Bar 1 (Buku Edukasi - 70%) -->
+                            <div class="bg-white rounded-xl p-5 border border-orange-100 shadow-sm space-y-3">
+                                <div class="flex justify-between items-center text-sm font-semibold">
+                                    <span class="text-brandDark font-bold">📖 Pengadaan Buku Edukasi Anak Jalanan</span>
+                                    <span class="text-brandRed font-heading text-xl font-bold">70%</span>
+                                </div>
+                                <!-- Progress Bar Wrapper -->
+                                <div class="w-full bg-orange-100 rounded-full h-4 overflow-hidden p-0.5 border border-orange-200">
+                                    <div class="bg-brandRed h-full rounded-full transition-all duration-1000 shadow-inner" style="width: 70%;"></div>
+                                </div>
+                                <p class="text-[10px] text-gray-500 leading-normal">Distribusi 5.000 paket buku tulis &amp; bacaan edukatif dasar untuk anak-anak jalanan.</p>
+                            </div>
+
+                            <!-- Progress Bar 2 (Buah & Susu - 30%) -->
+                            <div class="bg-white rounded-xl p-5 border border-orange-100 shadow-sm space-y-3">
+                                <div class="flex justify-between items-center text-sm font-semibold">
+                                    <span class="text-brandDark font-bold">🥛 Suplai Buah &amp; Susu Nutrisi Stunting</span>
+                                    <span class="text-brandOrange font-heading text-xl font-bold">30%</span>
+                                </div>
+                                <!-- Progress Bar Wrapper -->
+                                <div class="w-full bg-orange-100 rounded-full h-4 overflow-hidden p-0.5 border border-orange-200">
+                                    <div class="bg-brandOrange h-full rounded-full transition-all duration-1000 shadow-inner" style="width: 30%;"></div>
+                                </div>
+                                <p class="text-[10px] text-gray-500 leading-normal">Pendistribusian berkala ke 10 Posyandu binaan sekitar wilayah TMII bagi anak-anak stunting.</p>
+                            </div>
+                        </div>
+
+                        <!-- Callout box -->
+                        <div class="bg-white rounded-xl p-4 border border-orange-100 text-center">
+                            <span class="text-[10px] text-gray-500 block uppercase font-bold">Laporan Akuntabilitas</span>
+                            <p class="text-xs text-gray-700 mt-1">Diaudit secara resmi oleh Kantor Akuntan Publik Terdaftar dan dipublikasikan transparan pasca-event.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUSUNAN ACARA & FAQ SECTION -->
+    <section id="faq" class="py-20 bg-brandCream bg-motif-nusantara">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- General Rundown (Left side) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Agenda Kegiatan</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">General Rundown Acara</h2>
+                    <div class="h-1 w-24 bg-brandRed"></div>
+                    <p class="text-gray-700 text-sm mb-6">Jadwal susunan rangkaian acara resmi BHINNEKA RUN 2026 di hari
+                        H pelaksaan lomba:</p>
+
+                    <!-- Rundown Timeline list -->
+                    <div class="space-y-4 border-l-2 border-brandRed pl-6 ml-2 text-sm">
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.00 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Open Gate &amp; Area Transit Pelari</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.30 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Upacara Pembukaan &amp; Penyambutan MC</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.40 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Warming Up (Sesi Zumba Bersama)</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.50 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Menyanyikan Lagu Kebangsaan Indonesia Raya
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.52 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Pembacaan Doa Bersama</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">05.55 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Safety Briefing Jalur Lomba oleh Race
+                                Director</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandOrange">06.00 / 06.05 / 06.10 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Sesi Rangkaian Flag Off Balapan (10K, 5K,
+                                &amp; 3K)</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">08.20 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Welcoming Finisher &amp; Pembagian
+                                Refreshment</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">08.30 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Festival Budaya, Pembagian Doorprize &amp;
+                                Podium Award</p>
+                        </div>
+                        <!-- Item -->
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brandRed border-4 border-white">
+                            </div>
+                            <span class="font-bold text-brandRed">10.00 WIB</span>
+                            <p class="font-semibold text-brandDark uppercase">Penutupan Kegiatan &amp; Batas Akhir Area
+                                Lomba</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion (Right side) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Pertanyaan Populer</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Frequently Asked Questions
+                    </h2>
+                    <div class="h-1 w-24 bg-brandRed"></div>
+
+                    <!-- FAQ Items container -->
+                    <div class="space-y-4">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Kapan dan di mana BHINNEKA RUN 2026 diselenggarakan?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">BHINNEKA RUN 2026 akan
+                                    diselenggarakan pada hari <span class="font-semibold text-brandRed">Minggu, 12 Juli
+                                        2026</span>, berpusat di <span class="font-semibold text-brandRed">Plaza Keong
+                                        Mas, Taman Mini Indonesia Indah (TMII), Jakarta</span>.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Kategori lari apa saja yang tersedia untuk dipilih?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Tersedia tiga pilihan kategori
+                                    resmi: Kategori 3K (Fun Run) yang ditujukan untuk rekreasi keluarga, Kategori 5K
+                                    (National Run) sebagai tingkat menengah, dan Kategori 10K (Challenge Run) yang
+                                    merupakan ajang kompetisi utama berhadiah podium.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Berapa biaya registrasi masing-masing kategori lari?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Rincian biaya pendaftaran: Kategori
+                                    3K seharga Rp 75.000, Kategori 5K seharga Rp 125.000, dan Kategori 10K seharga Rp
+                                    150.000. Biaya ini berlaku untuk pendaftaran mandiri secara online.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Kapan dan di mana pengambilan Race Pack (RPC) dilakukan?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Pengambilan kelengkapan lomba (Race
+                                    Pack Collection) dijadwalkan berlangsung selama dua hari sebelum hari H lomba, yaitu
+                                    pada tanggal <span class="font-semibold text-brandRed">10 - 11 Juli 2026</span> di
+                                    stan layanan resmi area Plaza Keong Mas TMII.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Apakah pelari kategori 3K berhak mendapatkan timing chip?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Tidak. Perekaman waktu akurat
+                                    menggunakan RFID Timing Chip hanya disediakan untuk pelari kategori kompetitif,
+                                    yaitu <span class="font-semibold text-brandRed">kategori 5K dan 10K</span>.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Di mana lokasi ketersediaan Pos Water Station sepanjang jalur lintasan?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Pos penyedia hidrasi air mineral
+                                    tersebar strategis di beberapa kilometer: 1 titik untuk rute 3K (KM 1.5), 2 titik
+                                    untuk rute 5K (KM 2 &amp; KM 4), dan 3 titik sepanjang jalur rute 10K.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 7 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Bagaimana ketentuan untuk mengikuti Best Costume Competition?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Setiap peserta terdaftar berhak
+                                    mengikuti kontes dengan mengenakan pakaian adat nusantara atau kostum bertemakan
+                                    keberagaman yang aman dan tidak mengganggu aktivitas berlari. Penilaian dilakukan
+                                    langsung di garis finish oleh juri resmi.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 8 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Apakah setiap penuntas rute lari akan menerima medali finisher?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Ya. Seluruh pelari terdaftar yang
+                                    berhasil melewati garis finish dalam batas waktu Cut-Off Time (COT) yang ditentukan
+                                    berhak menerima medali logam khusus sesuai kategori (Gold untuk 10K, Silver untuk
+                                    5K, Bronze untuk 3K).</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 9 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Di mana lokasi kantong parkir resmi terdekat dari Plaza Keong Mas?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Tersedia 5 area kantong parkir
+                                    resmi: Gedung Parkir Bertingkat TMII, Parkir Padepokan Pencak Silat, Area Parkir
+                                    Masjid At-Tin, serta pelataran Plaza Selatan &amp; Plaza Barat TMII.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 10 -->
+                        <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
+                            aria-expanded="false">
+                            <button type="button"
+                                class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
+                                <span>Apakah ada undian berhadiah (doorprize) di akhir acara?</span>
+                                <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
+                                <p class="p-5 text-xs text-gray-700 leading-relaxed">Ya, panitia menyediakan undian
+                                    kupon doorprize berhadiah menarik seperti peralatan elektronik rumah tangga,
+                                    perlengkapan olahraga, dan grand prize khusus yang diundi langsung di panggung
+                                    festival utama sebelum acara ditutup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENUTUPAN PENDAFTARAN & FINAL CTA -->
+    <section id="daftar" class="py-24 gradient-merah-oranye-gold bg-motif-nusantara-dark text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <span
+                class="inline-block bg-white bg-opacity-20 border border-white border-opacity-30 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase">Amankan
+                Slot Kepesertaan Anda</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold font-heading uppercase tracking-tight">Siap Menjadi Bagian
+                dari Satu Garis Finish?</h2>
+            <p class="text-lg md:text-xl text-white text-opacity-90 max-w-2xl mx-auto font-body font-light">
+                Jangan lewatkan momen kolosal bersejarah ini. Kuota pendaftaran dibatasi secara ketat hanya untuk 5.000
+                pelari demi keselamatan dan kenyamanan lintasan.
+            </p>
+
+            <div class="pt-6">
+                <!-- CTA Button links to external signup simulation -->
+                <a href="https://dev.dtiketin.com/events/bhinneka-run" target="_blank" rel="noopener noreferrer"
+                    class="bg-white hover:bg-brandCream text-brandRed font-extrabold py-4 px-12 rounded-full shadow-2xl transition-transform hover:scale-105 inline-block text-lg uppercase tracking-wider">Daftar
+                    Sekarang Juga</a>
+            </div>
+
+            <p class="text-xs text-white text-opacity-70 font-semibold uppercase tracking-widest pt-2">
+                Tautan pendaftaran diarahkan menuju platform tiket mitra resmi dTiketin
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandDark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <!-- Footer Logo -->
+            <div class="flex justify-center">
+                <img src="assets/images/logo-placeholder.png" alt="Logo Resmi BHINNEKA RUN"
+                    class="h-10 w-auto filter brightness-0 invert opacity-60">
+            </div>
+
+            <p class="text-xs max-w-md mx-auto leading-relaxed">
+                Plaza Keong Mas, Taman Mini Indonesia Indah (TMII), Jakarta Timur, Indonesia.<br>
+                © 2026 BHINNEKA RUN. Hak Cipta Dilindungi Undang-Undang.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

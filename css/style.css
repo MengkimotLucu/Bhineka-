@@ -1,0 +1,199 @@
+:root {
+    --merah-nusantara: #C62828;
+    --orange-surya: #F57C00;
+    --gold-accent: #D4AF37;
+    --cream-bg: #FFF7E6;
+    --dark-text: #1A1A1A;
+    --white: #FFFFFF;
+
+    --merah-hover: #A51D1D;
+    --orange-hover: #E06900;
+    --font-heading: 'Bebas Neue', 'Oswald', sans-serif;
+    --font-body: 'Inter', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 2. PENGATURAN UMUM */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--cream-bg);
+    color: var(--dark-text);
+    font-family: var(--font-body);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* 3. TIPOGRAFI */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+}
+
+/* 4. MOTIF NUSANTARA DEKORATIF */
+.bg-motif-nusantara {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23C62828' stroke-opacity='0.05' stroke-width='1.5'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' fill='none' stroke='%23F57C00' stroke-opacity='0.03' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23D4AF37' fill-opacity='0.08'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+.bg-motif-nusantara-dark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23FFFFFF' stroke-opacity='0.04' stroke-width='1.5'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' fill='none' stroke='%23D4AF37' stroke-opacity='0.03' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23F57C00' fill-opacity='0.06'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+/* 5. EFEK VISUAL & TRANSISI KUSTOM */
+.gradient-merah-oranye-gold {
+    background: linear-gradient(135deg, var(--merah-nusantara) 0%, var(--orange-surya) 60%, var(--gold-accent) 100%);
+}
+
+.gradient-dark-card {
+    background: linear-gradient(145deg, #252525 0%, #1A1A1A 100%);
+}
+
+.hover-glow {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hover-glow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(198, 40, 40, 0.3);
+}
+
+.hover-glow-gold:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(212, 175, 55, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--merah-nusantara);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--merah-hover);
+}
+
+/* 6. TAB RUTE LARI */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* 7. FAQ ACCORDION TRANSITIONS */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+    transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* 8. KUSTOMISASI ELEMENT CHARITY PROGRESS */
+.charity-progress-bar {
+    position: relative;
+    height: 24px;
+    background-color: #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.charity-progress-fill {
+    height: 100%;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(90deg, var(--merah-nusantara) 0%, var(--orange-surya) 100%);
+}
+
+/* 9. DEKORASI TIMELINE EVENT */
+.timeline-dot {
+    position: relative;
+}
+
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--gold-accent);
+    border: 3px solid var(--white);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .timeline-line {
+        position: relative;
+    }
+
+    .timeline-line::before {
+        content: '';
+        position: absolute;
+        height: 4px;
+        background: linear-gradient(90deg, var(--merah-nusantara) 0%, var(--orange-surya) 50%, var(--gold-accent) 100%);
+        top: 24px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .timeline-dot::after {
+        top: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline-line-vertical {
+        position: relative;
+    }
+
+    .timeline-line-vertical::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: linear-gradient(180deg, var(--merah-nusantara) 0%, var(--orange-surya) 50%, var(--gold-accent) 100%);
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        z-index: 1;
+    }
+
+    .timeline-dot-mobile::after {
+        left: 20px;
+        top: 24px;
+        transform: translate(-50%, -50%);
+    }
+}

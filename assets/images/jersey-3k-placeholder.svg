@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <style>
+      .card-bg { fill: #FFF7E6; stroke: #F57C00; stroke-width: 1.5; }
+      .jersey-base { fill: #FFF; stroke: #F57C00; stroke-width: 3; }
+      .jersey-collar { fill: #F57C00; }
+      .jersey-stripe { fill: #C62828; }
+      .text-title { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: bold; fill: #1A1A1A; text-anchor: middle; }
+      .text-sub { font-family: 'Inter', sans-serif; font-size: 12px; fill: #666666; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="298" height="298" x="1" y="1" rx="10" class="card-bg" />
+  
+  <!-- Jersey Graphic -->
+  <g transform="translate(70, 40)">
+    <!-- T-Shirt Silhouette -->
+    <path d="M 50 15 L 80 0 L 115 25 L 95 50 L 85 43 L 85 140 L 15 140 L 15 43 L 5 50 L -15 25 L 20 0 Z" class="jersey-base" />
+    <!-- Collar -->
+    <path d="M 35 7 C 35 15, 65 15, 65 7 Z" class="jersey-collar" />
+    <!-- Stripes -->
+    <path d="M 15 60 H 85 V 75 H 15 Z" class="jersey-stripe" />
+    <path d="M 15 85 H 85 V 90 H 15 Z" fill="#D4AF37" />
+    
+    <!-- Jersey Logo -->
+    <circle cx="50" cy="35" r="8" fill="#F57C00" />
+    <!-- "3K" on front -->
+    <text x="50" y="120" font-family="'Oswald', sans-serif" font-size="28" font-weight="900" fill="#1A1A1A" text-anchor="middle">3K</text>
+  </g>
+
+  <text x="150" y="240" class="text-title">OFFICIAL JERSEY 3K</text>
+  <text x="150" y="265" class="text-sub">Bahan Premium Dry-Fit - Nyaman & Ringan</text>
+</svg>
