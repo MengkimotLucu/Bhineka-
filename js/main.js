@@ -5,11 +5,44 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const REGISTRATION_ENABLED = false;
+
     // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
     const navbar = document.getElementById('navbar-container');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const registrationButtons = document.querySelectorAll('[data-registration-cta]');
+
+    registrationButtons.forEach(button => {
+        const openLabel = button.dataset.openLabel || button.textContent.trim();
+        const closedLabel = button.dataset.closedLabel || 'Coming Soon';
+        const originalHref = button.getAttribute('href');
+
+        button.dataset.openLabel = openLabel;
+        if (originalHref) {
+            button.dataset.registrationHref = originalHref;
+        }
+
+        if (REGISTRATION_ENABLED) {
+            if (button.dataset.registrationHref) {
+                button.setAttribute('href', button.dataset.registrationHref);
+            }
+            button.textContent = openLabel;
+            button.classList.remove('registration-cta-disabled');
+            button.removeAttribute('aria-disabled');
+            button.removeAttribute('tabindex');
+        } else {
+            button.removeAttribute('href');
+            button.textContent = closedLabel;
+            button.classList.add('registration-cta-disabled');
+            button.setAttribute('aria-disabled', 'true');
+            button.setAttribute('tabindex', '-1');
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+            });
+        }
+    });
 
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;
