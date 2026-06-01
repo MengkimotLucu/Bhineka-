@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollY = window.pageYOffset;
 
         // Sticky Navbar effect
-        if (scrollY > 50) {
+        if (navbar && scrollY > 50) {
             navbar.classList.add('shadow-xl', 'bg-opacity-95', 'backdrop-blur-md');
             navbar.classList.remove('bg-opacity-100');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('shadow-xl', 'bg-opacity-95', 'backdrop-blur-md');
             navbar.classList.add('bg-opacity-100');
         }
@@ -90,8 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const hEl = document.getElementById('timer-hours');
         const mEl = document.getElementById('timer-minutes');
         const sEl = document.getElementById('timer-seconds');
-        const timerContainer = document.getElementById('timer-container');
-
         if (difference <= 0) {
             if (dEl) dEl.innerText = '00';
             if (hEl) hEl.innerText = '00';
@@ -157,7 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
-        
+        if (!header) return;
+
         header.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
@@ -165,12 +164,17 @@ document.addEventListener('DOMContentLoaded', () => {
             accordionItems.forEach(innerItem => {
                 innerItem.classList.remove('active');
                 innerItem.setAttribute('aria-expanded', 'false');
+                const innerHeader = innerItem.querySelector('.accordion-header');
+                if (innerHeader) {
+                    innerHeader.setAttribute('aria-expanded', 'false');
+                }
             });
 
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
                 item.setAttribute('aria-expanded', 'true');
+                header.setAttribute('aria-expanded', 'true');
             }
         });
 

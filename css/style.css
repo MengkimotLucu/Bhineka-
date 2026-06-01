@@ -1,13 +1,16 @@
 :root {
     --merah-nusantara: #C62828;
-    --orange-surya: #F57C00;
-    --gold-accent: #D4AF37;
-    --cream-bg: #FFF7E6;
-    --dark-text: #1A1A1A;
+    --orange-surya: #C86B1A;
+    --gold-accent: #C89B2B;
+    --cream-bg: #F7F4EE;
+    --surface-soft: #FBF8F3;
+    --border-soft: #E8DED2;
+    --dark-text: #171717;
+    --muted-text: #5F5A54;
     --white: #FFFFFF;
 
     --merah-hover: #A51D1D;
-    --orange-hover: #E06900;
+    --orange-hover: #B75F15;
     --font-heading: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 }
@@ -15,17 +18,18 @@
 /* 2. PENGATURAN UMUM */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
     background-color: var(--cream-bg);
     color: var(--dark-text);
     font-family: var(--font-body);
-    font-size: 14px; /* Baseline 14px untuk pengaturan skala teks global */
+    font-size: 16px;
 }
 
 body {
     overflow-x: hidden;
-    font-size: 1rem; /* 14px */
-    line-height: 1.75; /* Spasi antar baris tinggi agar mudah dibaca oleh orang tua */
-    letter-spacing: 0.015em; /* Keregangan karakter optimal untuk keterbacaan tinggi di layar mobile */
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -38,7 +42,23 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+p {
+    color: var(--muted-text);
+}
+
+a,
+button {
+    transition: all 0.24s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(212, 175, 55, 0.55);
+    outline-offset: 3px;
 }
 
 /* 4. MOTIF NUSANTARA DEKORATIF */
@@ -54,7 +74,8 @@ h6 {
 
 /* 5. EFEK VISUAL & TRANSISI KUSTOM */
 .gradient-merah-oranye-gold {
-    background: linear-gradient(135deg, var(--merah-nusantara) 0%, var(--orange-surya) 60%, var(--gold-accent) 100%);
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 28%),
+        linear-gradient(135deg, #c62828 0%, #b3261e 58%, #8f1d1d 100%);
 }
 
 .gradient-dark-card {
@@ -67,7 +88,7 @@ h6 {
 
 .hover-glow:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px -10px rgba(198, 40, 40, 0.3);
+    box-shadow: 0 18px 36px -22px rgba(198, 40, 40, 0.35);
 }
 
 .hover-glow-gold:hover {
@@ -174,4 +195,48 @@ h6 {
     object-fit: contain;
     object-position: center;
     margin: 0 auto;
+}
+
+.mobile-sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem calc(0.875rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(23, 23, 23, 0.94);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-sticky-cta__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+    border-radius: 9999px;
+    background: var(--merah-nusantara);
+    color: var(--white);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px -16px rgba(198, 40, 40, 0.6);
+}
+
+.mobile-sticky-cta__button--secondary {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 5.5rem;
+    }
+
+    .route-map-canvas {
+        aspect-ratio: 4 / 3;
+    }
 }
