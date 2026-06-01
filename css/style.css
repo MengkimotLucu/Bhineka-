@@ -9,7 +9,7 @@
     --merah-hover: #A51D1D;
     --orange-hover: #E06900;
     --font-heading: 'Bebas Neue', 'Oswald', sans-serif;
-    --font-body: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
 }
 
 /* 2. PENGATURAN UMUM */
@@ -18,10 +18,16 @@ html {
     background-color: var(--cream-bg);
     color: var(--dark-text);
     font-family: var(--font-body);
+    font-size: 14px; /* Baseline 14px untuk pengaturan skala teks global */
 }
 
 body {
     overflow-x: hidden;
+    font-size: 1rem; /* 14px */
+    line-height: 1.75; /* Spasi antar baris tinggi agar mudah dibaca oleh orang tua */
+    letter-spacing: 0.015em; /* Keregangan karakter optimal untuk keterbacaan tinggi di layar mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* 3. TIPOGRAFI */
@@ -133,67 +139,4 @@ h6 {
     height: 100%;
     transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
     background: linear-gradient(90deg, var(--merah-nusantara) 0%, var(--orange-surya) 100%);
-}
-
-/* 9. DEKORASI TIMELINE EVENT */
-.timeline-dot {
-    position: relative;
-}
-
-.timeline-dot::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--gold-accent);
-    border: 3px solid var(--white);
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-    z-index: 10;
-}
-
-@media (min-width: 768px) {
-    .timeline-line {
-        position: relative;
-    }
-
-    .timeline-line::before {
-        content: '';
-        position: absolute;
-        height: 4px;
-        background: linear-gradient(90deg, var(--merah-nusantara) 0%, var(--orange-surya) 50%, var(--gold-accent) 100%);
-        top: 24px;
-        left: 0;
-        right: 0;
-        z-index: 1;
-    }
-
-    .timeline-dot::after {
-        top: 18px;
-    }
-}
-
-@media (max-width: 767px) {
-    .timeline-line-vertical {
-        position: relative;
-    }
-
-    .timeline-line-vertical::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        background: linear-gradient(180deg, var(--merah-nusantara) 0%, var(--orange-surya) 50%, var(--gold-accent) 100%);
-        top: 0;
-        bottom: 0;
-        left: 20px;
-        z-index: 1;
-    }
-
-    .timeline-dot-mobile::after {
-        left: 20px;
-        top: 24px;
-        transform: translate(-50%, -50%);
-    }
 }

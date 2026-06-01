@@ -1,33 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
-  <defs>
-    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C62828" />
-      <stop offset="60%" stop-color="#F57C00" />
-      <stop offset="100%" stop-color="#D4AF37" />
-    </linearGradient>
-    <style>
-      .title-main { font-family: 'Oswald', 'Bebas Neue', Arial, sans-serif; font-size: 38px; font-weight: 900; fill: #1A1A1A; letter-spacing: 2px; }
-      .title-sub { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #F57C00; letter-spacing: 4px; }
-      .accent-box { fill: url(#brand-grad); }
-    </style>
-  </defs>
-  
-  <!-- Icon Graphic -->
-  <g transform="translate(15, 20)">
-    <!-- Runner Silhouette stylized -->
-    <path d="M45 15 C52 15 55 8 50 3 C45 -2 38 1 35 6 C32 11 38 15 45 15 Z" fill="#C62828" />
-    <path d="M12 48 L22 32 L34 38 L45 20 L58 35 L48 52 L36 44 L25 58 Z" fill="url(#brand-grad)" />
-    <!-- Dynamic lines representing speed -->
-    <line x1="2" y1="25" x2="18" y2="25" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" />
-    <line x1="-5" y1="35" x2="12" y2="35" stroke="#F57C00" stroke-width="4" stroke-linecap="round" />
-    <line x1="5" y1="45" x2="15" y2="45" stroke="#C62828" stroke-width="3" stroke-linecap="round" />
-  </g>
-
-  <!-- Typography -->
-  <text x="95" y="58" class="title-main">BHINNEKA <tspan fill="#C62828">RUN</tspan></text>
-  <text x="95" y="85" class="title-sub">DIFFERENT STORIES, ONE FINISH LINE</text>
-  
-  <!-- Year Accent -->
-  <rect x="315" y="24" width="70" height="36" rx="6" class="accent-box" />
-  <text x="350" y="49" font-family="'Oswald', sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2026</text>
+  <!-- Empty placeholder -->
 </svg>
