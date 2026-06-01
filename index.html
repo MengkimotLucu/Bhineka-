@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;800&family=Oswald:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
@@ -34,8 +34,8 @@
                         brandDark: '#1A1A1A',
                     },
                     fontFamily: {
-                        heading: ['Bebas Neue', 'Oswald', 'sans-serif'],
-                        body: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
@@ -47,27 +47,27 @@
 
     <!-- HEADER / NAVIGATION (STICKY NAVBAR) -->
     <header id="navbar-container"
-        class="fixed top-0 left-0 w-full z-50 bg-white border-b border-orange-200 transition-all duration-300">
+        class="fixed top-0 left-0 w-full z-50 bg-brandRed border-b border-red-900 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex-shrink-0 flex items-center gap-3">
-                    <img src="assets/images/logo-placeholder.png" alt="Logo Resmi BHINNEKA RUN 2026"
-                        class="h-12 w-auto">
+                    <img src="assets/images/bhinnekalogo.png" alt="Logo Resmi Bhinneka Run"
+                        class="h-12 md:h-14 w-auto object-contain">
                 </a>
 
                 <!-- Grouped Desktop Navigation (Regular Links & Specific Dropdowns) -->
                 <nav class="hidden xl:flex items-center space-x-8">
                     <!-- Home -->
                     <a href="#home"
-                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Home</a>
+                        class="nav-link text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider">Home</a>
 
                     <!-- Informasi Dropdown -->
                     <div class="relative group py-4">
                         <button type="button"
-                            class="flex items-center gap-1 text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider focus:outline-none">
+                            class="flex items-center gap-1 text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider focus:outline-none">
                             <span>Informasi</span>
-                            <svg class="h-4 w-4 text-brandRed group-hover:rotate-180 transition-transform duration-300"
+                            <svg class="h-4 w-4 text-brandGold group-hover:rotate-180 transition-transform duration-300"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
@@ -80,18 +80,16 @@
                                 <a href="#tentang"
                                     class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Tentang
                                     Event</a>
-                                <a href="#faq"
-                                    class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">FAQ</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Kompetisi Dropdown -->
+                    <!-- Race Dropdown -->
                     <div class="relative group py-4">
                         <button type="button"
-                            class="flex items-center gap-1 text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider focus:outline-none">
-                            <span>Kompetisi</span>
-                            <svg class="h-4 w-4 text-brandRed group-hover:rotate-180 transition-transform duration-300"
+                            class="flex items-center gap-1 text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider focus:outline-none">
+                            <span>Race</span>
+                            <svg class="h-4 w-4 text-brandGold group-hover:rotate-180 transition-transform duration-300"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
@@ -103,7 +101,7 @@
                             <div class="py-1">
                                 <a href="#kategori"
                                     class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Kategori
-                                    Lari</a>
+                                    Race</a>
                                 <a href="#route"
                                     class="nav-link block px-4 py-2.5 text-xs text-brandDark hover:bg-orange-50 hover:text-brandRed font-semibold uppercase tracking-wide">Rute
                                     Lintasan</a>
@@ -116,28 +114,28 @@
 
                     <!-- Hiburan -->
                     <a href="#entertainment"
-                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Hiburan</a>
+                        class="nav-link text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider">Hiburan</a>
 
                     <!-- Donasi (Charity) -->
                     <a href="#charity"
-                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Donasi</a>
+                        class="nav-link text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider">Donasi</a>
 
                     <!-- Lokasi (Venue) -->
                     <a href="#venue"
-                        class="nav-link text-sm font-extrabold text-brandDark hover:text-brandRed transition-colors uppercase tracking-wider">Lokasi</a>
+                        class="nav-link text-sm font-extrabold text-white hover:text-brandGold transition-colors uppercase tracking-wider">Lokasi</a>
                 </nav>
 
                 <!-- CTA Button -->
                 <div class="hidden xl:block">
                     <a href="#daftar"
-                        class="bg-brandRed hover:bg-red-800 text-white font-bold py-2.5 px-6 rounded-full transition-transform hover:scale-105 inline-block text-sm tracking-wider uppercase">Daftar
+                        class="bg-white hover:bg-brandCream text-brandRed font-bold py-2.5 px-6 rounded-full transition-transform hover:scale-105 inline-block text-sm tracking-wider uppercase">Daftar
                         Sekarang</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="xl:hidden flex items-center">
                     <button id="menu-btn" type="button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-brandDark hover:text-brandRed hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-brandRed"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-brandGold hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-white"
                         aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Buka Menu Navigasi</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -150,30 +148,30 @@
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t border-orange-100">
+        <nav id="mobile-menu" class="hidden xl:hidden bg-brandRed border-t border-red-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a href="#home"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">HOME</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">HOME</a>
                 <a href="#tentang"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">TENTANG</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">TENTANG</a>
                 <a href="#kategori"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">KATEGORI
-                    LARI</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">KATEGORI
+                    RACE</a>
                 <a href="#route"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">RUTE</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">RUTE
+                    LINTASAN</a>
                 <a href="#benefit"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">BENEFIT</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">BENEFIT
+                    PESERTA</a>
                 <a href="#entertainment"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">HIBURAN</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">HIBURAN</a>
                 <a href="#venue"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">VENUE
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">VENUE
                     &amp; AKSES</a>
                 <a href="#charity"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">CHARITY</a>
-                <a href="#faq"
-                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-orange-50 hover:text-brandRed transition-colors">FAQ</a>
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold text-white hover:bg-red-800 hover:text-brandGold transition-colors">CHARITY</a>
                 <a href="#daftar"
-                    class="block w-full mt-2 bg-brandRed hover:bg-red-800 text-white font-bold py-3 px-4 rounded-md transition-colors">DAFTAR
+                    class="block w-full mt-2 bg-white hover:bg-brandCream text-brandRed font-bold py-3 px-4 rounded-md transition-colors">DAFTAR
                     SEKARANG</a>
             </div>
         </nav>
@@ -556,14 +554,18 @@
                 <div id="route-3k" class="tab-content active">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div class="lg:col-span-8">
-                            <img src="assets/images/route-3k-placeholder.jpg" alt="Peta Rute Lari Kategori 3K"
-                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                            <div class="route-map-panel">
+                                <div class="route-map-canvas">
+                                    <img src="assets/images/map3k.png" alt="Peta rute lari kategori 3K"
+                                        class="route-map-image">
+                                </div>
+                            </div>
                         </div>
                         <div class="lg:col-span-4 space-y-4">
                             <h4 class="font-heading text-3xl font-bold text-brandOrange uppercase">Rincian Rute Lintasan
                                 3K</h4>
-                            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="text-sm text-gray-700">Lintasan 3K dirancang untuk pelari pemula dan keluarga,
+                                dengan rute ringkas yang tetap melewati area cheering zone utama dan koridor medis.</p>
                             <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Jarak Riil:</span>
@@ -571,16 +573,22 @@
                                 </div>
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Water Station:</span>
-                                    <span class="font-bold text-brandDark">1 Titik (KM 1.5)</span>
+                                    <span class="font-bold text-brandDark">Area start/finish</span>
                                 </div>
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Pos Medis:</span>
-                                    <span class="font-bold text-brandDark">1 Titik (Samping Danau)</span>
+                                    <span class="font-bold text-brandDark">2 Titik (KM 1 &amp; KM 2)</span>
                                 </div>
                                 <div class="flex justify-between pb-1">
                                     <span class="text-gray-500">Cheering Zone:</span>
-                                    <span class="font-bold text-brandDark">1 Titik Atraksi Musik</span>
+                                    <span class="font-bold text-brandDark">3 Titik Dukungan Penonton</span>
                                 </div>
+                            </div>
+                            <div class="bg-white rounded-xl border border-orange-100 p-4 shadow-sm">
+                                <p class="text-[10px] font-bold text-brandRed uppercase tracking-widest mb-3">Legenda
+                                    Peta</p>
+                                <img src="assets/images/legendmap.png" alt="Legenda penanda rute lari"
+                                    class="route-legend-image">
                             </div>
                         </div>
                     </div>
@@ -590,14 +598,19 @@
                 <div id="route-5k" class="tab-content">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div class="lg:col-span-8">
-                            <img src="assets/images/route-5k-placeholder.jpg" alt="Peta Rute Lari Kategori 5K"
-                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                            <div class="route-map-panel">
+                                <div class="route-map-canvas">
+                                    <img src="assets/images/map5k.png" alt="Peta rute lari kategori 5K"
+                                        class="route-map-image">
+                                </div>
+                            </div>
                         </div>
                         <div class="lg:col-span-4 space-y-4">
                             <h4 class="font-heading text-3xl font-bold text-brandRed uppercase">Rincian Rute Lintasan 5K
                             </h4>
-                            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="text-sm text-gray-700">Rute 5K membawa pelari mengelilingi jalur utama dengan
+                                distribusi titik medis yang lebih rapat dan satu water station di sektor timur
+                                lintasan.</p>
                             <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Jarak Riil:</span>
@@ -605,16 +618,22 @@
                                 </div>
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Water Station:</span>
-                                    <span class="font-bold text-brandDark">2 Titik (KM 2 &amp; KM 4)</span>
+                                    <span class="font-bold text-brandDark">1 Titik Distribusi</span>
                                 </div>
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Pos Medis:</span>
-                                    <span class="font-bold text-brandDark">2 Titik Kesiapsiagaan</span>
+                                    <span class="font-bold text-brandDark">3 Titik (KM 1, KM 2 &amp; KM 4)</span>
                                 </div>
                                 <div class="flex justify-between pb-1">
                                     <span class="text-gray-500">Cheering Zone:</span>
-                                    <span class="font-bold text-brandDark">2 Titik Paguyuban Budaya</span>
+                                    <span class="font-bold text-brandDark">4 Titik Aktivasi Komunitas</span>
                                 </div>
+                            </div>
+                            <div class="bg-white rounded-xl border border-orange-100 p-4 shadow-sm">
+                                <p class="text-[10px] font-bold text-brandRed uppercase tracking-widest mb-3">Legenda
+                                    Peta</p>
+                                <img src="assets/images/legendmap.png" alt="Legenda penanda rute lari"
+                                    class="route-legend-image">
                             </div>
                         </div>
                     </div>
@@ -624,14 +643,19 @@
                 <div id="route-10k" class="tab-content">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div class="lg:col-span-8">
-                            <img src="assets/images/route-10k-placeholder.jpg" alt="Peta Rute Lari Kategori 10K"
-                                class="w-full h-auto rounded-xl shadow-inner border border-orange-100">
+                            <div class="route-map-panel">
+                                <div class="route-map-canvas">
+                                    <img src="assets/images/map10k.png" alt="Peta rute lari kategori 10K"
+                                        class="route-map-image">
+                                </div>
+                            </div>
                         </div>
                         <div class="lg:col-span-4 space-y-4">
                             <h4 class="font-heading text-3xl font-bold text-brandGold uppercase">Rincian Rute Lintasan
                                 10K</h4>
-                            <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="text-sm text-gray-700">Lintasan 10K menjadi rute terlengkap dengan tiga water
+                                station, sembilan checkpoint medis, dan jalur memanjang yang melintasi hampir seluruh
+                                area kompetisi.</p>
                             <div class="space-y-2 text-sm pt-4 border-t border-orange-200">
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Jarak Riil:</span>
@@ -643,12 +667,18 @@
                                 </div>
                                 <div class="flex justify-between border-b border-orange-100 pb-1">
                                     <span class="text-gray-500">Pos Medis:</span>
-                                    <span class="font-bold text-brandDark">2 Unit Ambulans &amp; Pos Tetap</span>
+                                    <span class="font-bold text-brandDark">9 Titik (KM 1 s.d. KM 9)</span>
                                 </div>
                                 <div class="flex justify-between pb-1">
                                     <span class="text-gray-500">Cheering Zone:</span>
                                     <span class="font-bold text-brandDark">4 Titik Seni Pertunjukan Kolosal</span>
                                 </div>
+                            </div>
+                            <div class="bg-white rounded-xl border border-orange-100 p-4 shadow-sm">
+                                <p class="text-[10px] font-bold text-brandRed uppercase tracking-widest mb-3">Legenda
+                                    Peta</p>
+                                <img src="assets/images/legendmap.png" alt="Legenda penanda rute lari"
+                                    class="route-legend-image">
                             </div>
                         </div>
                     </div>
@@ -780,10 +810,10 @@
                     <!-- Preview 10K (Gold) -->
                     <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
                         <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
-                            <div class="p-2"><img src="assets/images/jersey-10k-placeholder.jpg"
-                                    alt="Preview Jersey Kategori 10K" class="w-full h-auto"></div>
-                            <div class="p-2"><img src="assets/images/medal-gold-placeholder.jpg"
-                                    alt="Preview Medali Emas Kategori 10K" class="w-full h-auto"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/jersey10k.png"
+                                    alt="Preview jersey kategori 10K" class="w-full h-48 object-contain"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/medalgold.png"
+                                    alt="Preview medali emas kategori 10K" class="w-full h-48 object-contain"></div>
                         </div>
                         <div class="p-6 text-center space-y-2">
                             <span
@@ -797,10 +827,10 @@
                     <!-- Preview 5K (Silver) -->
                     <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
                         <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
-                            <div class="p-2"><img src="assets/images/jersey-5k-placeholder.jpg"
-                                    alt="Preview Jersey Kategori 5K" class="w-full h-auto"></div>
-                            <div class="p-2"><img src="assets/images/medal-silver-placeholder.jpg"
-                                    alt="Preview Medali Perak Kategori 5K" class="w-full h-auto"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/jersey5k.png"
+                                    alt="Preview jersey kategori 5K" class="w-full h-48 object-contain"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/medalsilver.png"
+                                    alt="Preview medali perak kategori 5K" class="w-full h-48 object-contain"></div>
                         </div>
                         <div class="p-6 text-center space-y-2">
                             <span
@@ -814,10 +844,10 @@
                     <!-- Preview 3K (Bronze) -->
                     <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
                         <div class="grid grid-cols-2 divide-x divide-orange-100 bg-brandCream">
-                            <div class="p-2"><img src="assets/images/jersey-3k-placeholder.jpg"
-                                    alt="Preview Jersey Kategori 3K" class="w-full h-auto"></div>
-                            <div class="p-2"><img src="assets/images/medal-bronze-placeholder.jpg"
-                                    alt="Preview Medali Perunggu Kategori 3K" class="w-full h-auto"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/jersey3k.png"
+                                    alt="Preview jersey kategori 3K" class="w-full h-48 object-contain"></div>
+                            <div class="p-2 bg-white flex items-center justify-center"><img src="assets/images/medalbronze.png"
+                                    alt="Preview medali perunggu kategori 3K" class="w-full h-48 object-contain"></div>
                         </div>
                         <div class="p-6 text-center space-y-2">
                             <span
@@ -825,6 +855,64 @@
                                 3K</span>
                             <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Jersey &amp; Medal
                                 Perunggu</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8 pt-4">
+                    <h3 class="font-heading text-3xl font-bold text-brandRed text-center uppercase">Doorprize Utama
+                        Peserta</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                            <div class="p-4 bg-brandCream min-h-[220px] flex items-center justify-center">
+                                <img src="assets/images/garmin.png" alt="Garmin running watch untuk doorprize"
+                                    class="w-full h-48 object-contain">
+                            </div>
+                            <div class="p-5 text-center space-y-2">
+                                <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Garmin Running
+                                    Watch</h4>
+                                <p class="text-xs text-gray-600">Hadiah utama untuk pengundian peserta beruntung pada
+                                    puncak acara.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                            <div class="p-4 bg-brandCream min-h-[220px] flex items-center justify-center">
+                                <img src="assets/images/xioami.png" alt="Smart band Xiaomi untuk doorprize"
+                                    class="w-full h-48 object-contain">
+                            </div>
+                            <div class="p-5 text-center space-y-2">
+                                <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Smart Band
+                                    Xiaomi</h4>
+                                <p class="text-xs text-gray-600">Perangkat pemantau aktivitas untuk peserta yang ikut
+                                    undian race village.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                            <div class="p-4 bg-brandCream min-h-[220px] flex items-center justify-center">
+                                <img src="assets/images/headset.png" alt="Headset open-ear untuk doorprize"
+                                    class="w-full h-48 object-contain">
+                            </div>
+                            <div class="p-5 text-center space-y-2">
+                                <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Open-Ear
+                                    Headset</h4>
+                                <p class="text-xs text-gray-600">Hadiah audio sport-friendly untuk menambah semangat
+                                    latihan setelah event.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden border border-orange-200 shadow-md">
+                            <div class="p-4 bg-brandCream min-h-[220px] flex items-center justify-center">
+                                <img src="assets/images/voucherindomaret.png" alt="Voucher Indomaret untuk doorprize"
+                                    class="w-full h-48 object-contain">
+                            </div>
+                            <div class="p-5 text-center space-y-2">
+                                <h4 class="font-heading text-2xl font-bold text-brandDark uppercase">Voucher
+                                    Indomaret</h4>
+                                <p class="text-xs text-gray-600">Doorprize cepat untuk sesi games, aktivasi sponsor,
+                                    dan pengumuman berkala.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -842,118 +930,69 @@
                     Nusantara</h2>
                 <div class="h-1 w-24 bg-brandRed mx-auto"></div>
                 <p class="text-gray-600 text-lg leading-relaxed pt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+                    Race village akan diisi panggung budaya, pertunjukan komunitas, dan aktivasi interaktif untuk
+                    menemani pelari maupun keluarga selama acara berlangsung.
                 </p>
             </div>
 
-            <!-- Grid 9 Cards of Entertainment -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Tari Pendet Bali" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">1. Tari Pendet Bali</h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-red-100 text-3xl flex items-center justify-center">💃</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Tari Pendet Bali</h4>
+                        <p class="text-xs text-gray-600">Penampilan pembuka yang menyambut peserta di area race village
+                            sebelum flag off dimulai.</p>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Rampak Bedug Banten" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">2. Rampak Bedug Banten</h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-orange-100 text-3xl flex items-center justify-center">🥁</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Rampak Bedug Banten</h4>
+                        <p class="text-xs text-gray-600">Irama perkusi energik untuk membangun atmosfer semangat di area
+                            start dan cheering zone.</p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Medley Nusantara" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">3. Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-yellow-100 text-3xl flex items-center justify-center">🎶</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Medley Nusantara</h4>
+                        <p class="text-xs text-gray-600">Kolaborasi musik lintas daerah untuk menemani peserta dan
+                            pendukung di sepanjang acara.</p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Reog Ponorogo" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">4. Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-red-100 text-3xl flex items-center justify-center">🦁</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Reog Ponorogo</h4>
+                        <p class="text-xs text-gray-600">Atraksi panggung utama yang menjadi highlight hiburan pada sesi
+                            penutupan dan pengundian hadiah.</p>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Angklung Interaktif" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">5. Lorem ipsum A</h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-orange-100 text-3xl flex items-center justify-center">🎼</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Angklung Interaktif</h4>
+                        <p class="text-xs text-gray-600">Sesi partisipatif untuk keluarga dan komunitas yang menunggu
+                            peserta finish di race village.</p>
                     </div>
                 </div>
 
-                <!-- Card 6 -->
                 <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Tanjidor Betawi" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Kuda Lumping" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Tor-Tor Batak" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <!-- Card 9 -->
-                <div
-                    class="bg-brandCream rounded-xl overflow-hidden border border-orange-200 shadow-sm flex flex-col justify-between hover-glow">
-                    <div class="p-4 bg-[#1A1A1A]"><img src="assets/images/entertainment-placeholder.jpg"
-                            alt="Barongsai Akrobatik" class="w-full h-32 object-cover rounded-lg"></div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Lorem ipsum </h4>
-                        <p class="text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    class="bg-brandCream rounded-xl border border-orange-200 shadow-sm p-6 flex flex-col gap-4 hover-glow">
+                    <div class="h-16 w-16 rounded-2xl bg-yellow-100 text-3xl flex items-center justify-center">🎺</div>
+                    <div class="space-y-2">
+                        <h4 class="font-heading text-2xl font-bold text-brandRed uppercase">Tanjidor Betawi</h4>
+                        <p class="text-xs text-gray-600">Nuansa khas Jakarta yang mengiringi pengunjung di area kuliner,
+                            sponsor, dan panggung komunitas.</p>
                     </div>
                 </div>
             </div>
@@ -1025,13 +1064,13 @@
                     <div
                         class="bg-white rounded-2xl p-4 border border-orange-200 shadow-md h-full flex flex-col justify-between min-h-[350px] lg:min-h-[450px]">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.748378622159!2d106.88939797587428!3d-6.303273393685933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2ae00000001%3A0xe54cb831e13e0186!2sPlaza%20Keong%20Mas!5e0!3m2!1sid!2sid!4v1717240000000!5m2!1sid!2sid"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.690022983905!2d106.88850157573233!3d-6.304396461700443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5da9c82f5d%3A0x6edef95d91ebbbf5!2sTeater%20Keong%20Emas!5e0!3m2!1sid!2sid!4v1780323686872!5m2!1sid!2sid"
                             class="w-full h-full min-h-[300px] lg:min-h-[380px] rounded-xl border border-orange-100 flex-grow"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                         <div class="pt-4 text-center">
                             <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Peta Lokasi
-                                Interaktif Plaza Keong Mas TMII</span>
+                                Interaktif Teater Keong Emas TMII</span>
                         </div>
                     </div>
                 </div>
@@ -1051,13 +1090,14 @@
                         Bersama</h2>
                     <div class="h-1 w-24 bg-brandRed"></div>
                     <p class="text-gray-600 text-lg leading-relaxed pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. <span class="font-bold text-brandRed">70% Buku</span> dan <span
-                            class="font-bold text-brandOrange">30% Buah/Susu</span>.
+                        Setiap langkah di BHINNEKA RUN membawa dampak nyata. Sebagian kontribusi dari partisipasi
+                        peserta akan disalurkan untuk program sosial anak-anak, dengan alokasi
+                        <span class="font-bold text-brandRed">70% untuk buku</span> dan
+                        <span class="font-bold text-brandOrange">30% untuk buah/susu</span>.
                     </p>
                     <p class="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Kami ingin memastikan semangat hidup sehat tidak berhenti di garis finish, tetapi juga hadir
+                        dalam bentuk dukungan pendidikan dan asupan yang lebih baik bagi mereka yang membutuhkan.
                     </p>
                 </div>
 
@@ -1071,7 +1111,7 @@
                             <!-- Progress Bar 1 (Buku Edukasi - 70%) -->
                             <div class="bg-white rounded-xl p-5 border border-orange-100 shadow-sm space-y-3">
                                 <div class="flex justify-between items-center text-sm font-semibold">
-                                    <span class="text-brandDark font-bold">Lorem ipsum</span>
+                                    <span class="text-brandDark font-bold">Buku Edukasi Anak</span>
                                     <span class="text-brandRed font-heading text-xl font-bold">70%</span>
                                 </div>
                                 <!-- Progress Bar Wrapper -->
@@ -1080,14 +1120,14 @@
                                     <div class="bg-brandRed h-full rounded-full transition-all duration-1000 shadow-inner"
                                         style="width: 70%;"></div>
                                 </div>
-                                <p class="text-[10px] text-gray-500 leading-normal">Lorem ipsums
-                                    &amp; Lorem ipsum.</p>
+                                <p class="text-[10px] text-gray-500 leading-normal">Dialokasikan untuk pengadaan buku
+                                    bacaan, perlengkapan belajar, dan materi edukasi yang bermanfaat.</p>
                             </div>
 
                             <!-- Progress Bar 2 (Buah & Susu - 30%) -->
                             <div class="bg-white rounded-xl p-5 border border-orange-100 shadow-sm space-y-3">
                                 <div class="flex justify-between items-center text-sm font-semibold">
-                                    <span class="text-brandDark font-bold">Lorem ipsum &amp; Lorem ipsum
+                                    <span class="text-brandDark font-bold">Buah &amp; Susu
                                     </span>
                                     <span class="text-brandOrange font-heading text-xl font-bold">30%</span>
                                 </div>
@@ -1097,8 +1137,8 @@
                                     <div class="bg-brandOrange h-full rounded-full transition-all duration-1000 shadow-inner"
                                         style="width: 30%;"></div>
                                 </div>
-                                <p class="text-[10px] text-gray-500 leading-normal">Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit.</p>
+                                <p class="text-[10px] text-gray-500 leading-normal">Disalurkan sebagai dukungan gizi
+                                    sederhana untuk membantu kebutuhan harian penerima manfaat.</p>
                             </div>
                         </div>
 
@@ -1107,221 +1147,24 @@
             </div>
         </div>
     </section>
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-20 bg-brandCream bg-motif-nusantara">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 space-y-4">
-                <span class="text-brandRed font-bold text-sm tracking-widest uppercase">Pertanyaan Populer</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold uppercase font-heading">Frequently Asked Questions</h2>
-                <div class="h-1 w-24 bg-brandRed mx-auto"></div>
-            </div>
-
-            <!-- FAQ Items container -->
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 6 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 7 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 8 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 9 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 10 -->
-                <div class="accordion-item bg-white rounded-xl border border-orange-200 overflow-hidden shadow-sm"
-                    aria-expanded="false">
-                    <button type="button"
-                        class="accordion-header w-full flex justify-between items-center p-5 text-left font-bold text-brandDark hover:text-brandRed focus:outline-none transition-colors">
-                        <span>Lorem ipsum dolor sit amet?</span>
-                        <svg class="accordion-icon w-5 h-5 text-brandRed" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-orange-50 bg-opacity-30 border-t border-orange-100">
-                        <p class="p-5 text-xs text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="bg-brandCream text-gray-600 py-12 border-t border-orange-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <!-- Footer Logo -->
-            <div class="flex justify-center">
-                <img src="assets/images/logo-placeholder.svg" alt="Logo Resmi BHINNEKA RUN"
-                    class="h-10 w-auto opacity-80">
+            <div class="space-y-2">
+                <h3 class="font-heading text-xl font-bold uppercase text-brandDark">Contact Us</h3>
+                <p class="text-sm leading-relaxed">
+                    Email:
+                    <a href="mailto:dtiketin@gmail.com" class="font-semibold text-brandRed hover:underline">dtiketin@gmail.com</a>
+                </p>
+                <p class="text-sm leading-relaxed">
+                    No:
+                    <a href="https://wa.me/6285172416033" target="_blank" rel="noopener noreferrer"
+                        class="font-semibold text-brandRed hover:underline">085172416033</a>
+                </p>
             </div>
 
             <p class="text-xs max-w-md mx-auto leading-relaxed">
-                © 2026 BHINNEKA RUN. Hak Cipta Dilindungi Undang-Undang.
+                © 2026 BHINNEKA RUN.
             </p>
         </div>
     </footer>

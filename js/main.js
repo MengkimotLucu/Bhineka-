@@ -32,16 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 // Desktop navbar
                 navLinks.forEach(link => {
-                    link.classList.remove('text-[#C62828]', 'font-bold');
+                    link.classList.remove('text-[#D4AF37]', 'font-bold');
                     if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('text-[#C62828]', 'font-bold');
+                        link.classList.add('text-[#D4AF37]', 'font-bold');
                     }
                 });
                 // Mobile navbar
                 mobileNavLinks.forEach(link => {
-                    link.classList.remove('bg-[#C62828]', 'text-white');
+                    link.classList.remove('bg-white', 'text-[#C62828]');
                     if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('bg-[#C62828]', 'text-white');
+                        link.classList.add('bg-white', 'text-[#C62828]');
                     }
                 });
             }
