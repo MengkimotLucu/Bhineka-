@@ -197,6 +197,73 @@ button:focus-visible {
     margin: 0 auto;
 }
 
+.entertainment-card {
+    position: relative;
+    overflow: visible;
+    isolation: isolate;
+    z-index: 0;
+    height: 100%;
+}
+
+.entertainment-card__panel {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 11rem;
+    gap: 1.25rem;
+    align-items: center;
+    min-height: 12.5rem;
+    height: 100%;
+}
+
+.entertainment-card__visual {
+    position: relative;
+    min-height: 8rem;
+    height: 100%;
+    overflow: visible;
+}
+
+.entertainment-card__art {
+    position: absolute;
+    inset-inline: 0;
+    bottom: -0.5rem;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+    will-change: transform;
+}
+
+.entertainment-card__image {
+    width: min(100%, 10.5rem);
+    max-height: 10rem;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 14px 24px rgba(198, 40, 40, 0.16));
+}
+
+.entertainment-card__content {
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    display: grid;
+    align-content: center;
+    gap: 0.65rem;
+    min-height: 7.25rem;
+}
+
+.entertainment-card__title {
+    min-height: 3.5rem;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.entertainment-card__desc {
+    min-height: 3.1rem;
+    margin: 0;
+}
+
 .mobile-sticky-cta {
     position: fixed;
     left: 0;
@@ -239,6 +306,21 @@ button:focus-visible {
     transform: none !important;
 }
 
+[data-hero-scramble] {
+    display: inline;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    vertical-align: baseline;
+    line-height: inherit;
+}
+
+@media (min-width: 768px) {
+    [data-hero-scramble] {
+        display: block;
+        width: auto !important;
+    }
+}
+
 @media (max-width: 767px) {
     html {
         scroll-padding-top: 5.5rem;
@@ -246,5 +328,42 @@ button:focus-visible {
 
     .route-map-canvas {
         aspect-ratio: 4 / 3;
+    }
+
+    .entertainment-card__panel {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 14rem;
+    }
+
+    .entertainment-card__visual {
+        min-height: 7rem;
+        order: -1;
+        height: auto;
+    }
+
+    .entertainment-card__art {
+        bottom: -0.25rem;
+    }
+
+    .entertainment-card__image {
+        width: min(100%, 8.5rem);
+        max-height: 8rem;
+    }
+
+    .entertainment-card__content {
+        min-height: auto;
+    }
+
+    .entertainment-card__title,
+    .entertainment-card__desc {
+        min-height: auto;
+    }
+
+    [data-hero-scramble] {
+        display: inline;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        width: auto !important;
+        line-height: inherit;
     }
 }

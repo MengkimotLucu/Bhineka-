@@ -6,6 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const REGISTRATION_ENABLED = false;
+    const ENABLE_HERO_SCRAMBLE = true;
 
     // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
     const navbar = document.getElementById('navbar-container');
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const registrationButtons = document.querySelectorAll('[data-registration-cta]');
+    const heroScrambleTarget = document.querySelector('[data-hero-scramble]');
+    const desktopScrambleQuery = window.matchMedia('(min-width: 1280px)');
+    const scrambleText = heroScrambleTarget ? heroScrambleTarget.textContent.trim() : '';
+    const entertainmentSection = document.getElementById('entertainment');
+    const entertainmentVisuals = document.querySelectorAll('[data-entertainment-visual]');
 
     registrationButtons.forEach(button => {
         const openLabel = button.dataset.openLabel || button.textContent.trim();
@@ -43,6 +49,63 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+    if (ENABLE_HERO_SCRAMBLE && heroScrambleTarget && window.gsap && window.ScrambleTextPlugin && desktopScrambleQuery.matches) {
+        gsap.registerPlugin(ScrambleTextPlugin);
+
+        const playHeroScramble = () => {
+            gsap.fromTo(heroScrambleTarget,
+                { opacity: 1 },
+                {
+                    duration: 1.8,
+                    scrambleText: {
+                        text: scrambleText,
+                        chars: 'upperCase',
+                        revealDelay: 0.18,
+                        speed: 0.45,
+                        tweenLength: false,
+                    },
+                    ease: 'none',
+                }
+            );
+        };
+
+        playHeroScramble();
+        // gsap.delayedCall(4.5, function repeatScramble() {
+        //     playHeroScramble();
+        //     gsap.delayedCall(4.5, repeatScramble);
+        // });
+    }
+
+    if (entertainmentVisuals.length > 0 && window.gsap && window.ScrollTrigger) {
+        gsap.set(entertainmentVisuals, {
+            yPercent: 95,
+        });
+
+        entertainmentVisuals.forEach((visual) => {
+            const card = visual.closest('.entertainment-card');
+            if (!card) return;
+
+            gsap.to(visual, {
+                yPercent: -18,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 92%',
+                    end: 'top 38%',
+                    scrub: 0.9,
+                },
+            });
+        });
+
+        if (entertainmentSection) {
+            ScrollTrigger.refresh();
+        }
+    }
 
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;
