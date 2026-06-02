@@ -82,6 +82,410 @@ button:focus-visible {
     background: linear-gradient(145deg, #252525 0%, #1A1A1A 100%);
 }
 
+.hero-premium {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 241, 214, 0.14), transparent 26%),
+        radial-gradient(circle at 78% 22%, rgba(212, 175, 55, 0.16), transparent 22%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06), transparent 42%),
+        linear-gradient(135deg, #7f1218 0%, #a61d22 32%, #bf2728 58%, #8b1118 100%);
+    isolation: isolate;
+}
+
+.hero-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.06), transparent 36%),
+        radial-gradient(circle at center, transparent 0%, transparent 46%, rgba(43, 6, 10, 0.28) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-premium__ornament {
+    position: absolute;
+    width: 24rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-premium__ornament--left {
+    left: -8rem;
+    bottom: -8rem;
+    background:
+        radial-gradient(circle, rgba(212, 175, 55, 0.24) 0 24%, transparent 25%),
+        repeating-radial-gradient(circle, rgba(212, 175, 55, 0.35) 0 2px, transparent 2px 16px);
+}
+
+.hero-premium__ornament--right {
+    right: -6rem;
+    top: 4rem;
+    width: 18rem;
+    background:
+        linear-gradient(45deg, rgba(255, 255, 255, 0.12), transparent 60%),
+        repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.28) 0 2px, transparent 2px 14px);
+    border-radius: 2.5rem;
+    transform: rotate(12deg);
+}
+
+.hero-premium__cloud {
+    position: absolute;
+    color: rgba(212, 175, 55, 0.38);
+    opacity: 0.28;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-premium__cloud svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-premium__cloud--top {
+    top: 7.5rem;
+    left: 4%;
+    width: min(18rem, 42vw);
+}
+
+.hero-premium__cloud--bottom {
+    right: 1%;
+    bottom: 3rem;
+    width: min(22rem, 48vw);
+}
+
+.hero-title-accent {
+    text-shadow: 0 10px 36px rgba(212, 175, 55, 0.22);
+}
+
+.hero-premium__content {
+    position: relative;
+}
+
+.hero-primary-cta {
+    background: linear-gradient(135deg, #f4c957 0%, #d4af37 48%, #f8e2a2 100%);
+    box-shadow: 0 22px 44px -24px rgba(20, 8, 10, 0.9);
+}
+
+.hero-primary-cta--light {
+    background: linear-gradient(180deg, #ffffff 0%, #fff5ed 100%);
+    box-shadow: 0 20px 46px -28px rgba(0, 0, 0, 0.85);
+}
+
+.hero-secondary-cta {
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    backdrop-filter: blur(14px);
+}
+
+.hero-secondary-cta:hover {
+    background: rgba(255, 247, 230, 0.96);
+    color: var(--merah-nusantara);
+    border-color: rgba(255, 247, 230, 0.96);
+}
+
+.hero-culture-showcase {
+    position: relative;
+    min-height: 18rem;
+    width: 100%;
+    max-width: 86rem;
+    margin: 0.2rem auto 0;
+}
+
+.hero-culture-showcase__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(12px);
+    pointer-events: none;
+}
+
+.hero-culture-showcase__glow--one {
+    inset: auto auto 2rem 28%;
+    width: 15rem;
+    height: 15rem;
+    background: radial-gradient(circle, rgba(255, 228, 178, 0.42), transparent 72%);
+}
+
+.hero-culture-showcase__glow--two {
+    top: 2rem;
+    right: 22%;
+    width: 16rem;
+    height: 16rem;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.22), transparent 72%);
+}
+
+.hero-social {
+    position: absolute;
+    top: 0.8rem;
+    z-index: 8;
+    display: inline-flex;
+    align-items: center;
+    min-height: 4.25rem;
+    padding: 0 1.35rem;
+    border-radius: 1.4rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.85);
+    pointer-events: none;
+}
+
+.hero-social::after {
+    content: "";
+    position: absolute;
+    bottom: -0.6rem;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0 0 0.4rem 0;
+    background: inherit;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.hero-social--left {
+    left: 16%;
+    background: linear-gradient(135deg, #2c7dff 0%, #0e59df 100%);
+}
+
+.hero-social--right {
+    right: 12%;
+    top: 2.3rem;
+    background: linear-gradient(135deg, #4dc58f 0%, #2ca56e 100%);
+}
+
+.culture-card {
+    position: absolute;
+    bottom: -0.2rem;
+    left: 50%;
+    width: clamp(11.2rem, 13.2vw, 12rem);
+    aspect-ratio: 0.78;
+    opacity: 1;
+    transform-origin: center bottom;
+}
+
+.culture-card__frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08)),
+        linear-gradient(160deg, rgba(255, 247, 230, 0.14), rgba(255, 255, 255, 0.04));
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 28px 55px -28px rgba(8, 4, 5, 0.95),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.culture-card__frame--ornamental {
+    background:
+        linear-gradient(180deg, rgba(145, 15, 18, 0.82), rgba(126, 14, 17, 0.74)),
+        radial-gradient(circle at 30% 20%, rgba(255, 221, 200, 0.18), transparent 32%);
+}
+
+.culture-card__frame--blueprint {
+    background:
+        linear-gradient(180deg, rgba(248, 247, 244, 0.96), rgba(223, 233, 255, 0.96)),
+        repeating-linear-gradient(45deg, rgba(36, 93, 196, 0.09) 0 2px, transparent 2px 18px);
+}
+
+.culture-card__frame--product {
+    background:
+        linear-gradient(180deg, rgba(255, 194, 70, 0.98), rgba(244, 173, 32, 0.96)),
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.28), transparent 22%);
+}
+
+.culture-card__frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(140deg, rgba(255, 255, 255, 0.18), transparent 34%),
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 28%);
+    pointer-events: none;
+}
+
+.culture-card__frame--featured {
+    background:
+        linear-gradient(180deg, rgba(255, 244, 221, 0.24), rgba(255, 255, 255, 0.08)),
+        linear-gradient(145deg, rgba(212, 175, 55, 0.18), rgba(255, 255, 255, 0.05));
+}
+
+.culture-card__frame--sunset {
+    background:
+        linear-gradient(180deg, rgba(255, 193, 163, 0.95), rgba(240, 109, 72, 0.86)),
+        radial-gradient(circle at 50% 25%, rgba(255, 232, 182, 0.35), transparent 28%);
+}
+
+.culture-card__frame--portrait {
+    background:
+        linear-gradient(180deg, rgba(20, 17, 17, 0.92), rgba(58, 24, 20, 0.92)),
+        repeating-radial-gradient(circle at 50% 50%, rgba(255, 108, 44, 0.18) 0 4px, transparent 4px 18px);
+}
+
+.culture-card__frame--poster {
+    background:
+        linear-gradient(180deg, rgba(36, 164, 255, 0.98), rgba(29, 112, 217, 0.96)),
+        radial-gradient(circle at 30% 26%, rgba(255, 255, 255, 0.2), transparent 22%);
+}
+
+.culture-card__frame--heritage {
+    background:
+        linear-gradient(180deg, rgba(29, 103, 57, 0.98), rgba(15, 72, 45, 0.96)),
+        radial-gradient(circle at 60% 16%, rgba(255, 255, 255, 0.18), transparent 20%);
+}
+
+.culture-card__frame--blueprint .culture-card__image {
+    filter: saturate(0.9) contrast(1.05) drop-shadow(0 18px 24px rgba(20, 6, 8, 0.18));
+}
+
+.culture-card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: none;
+}
+
+.culture-card__image--featured {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.culture-card--reog {
+    bottom: -2.15rem;
+    transform: translateX(-214%) rotate(-19deg);
+    z-index: 1;
+}
+
+.culture-card--angklung {
+    bottom: -0.55rem;
+    transform: translateX(-160%) rotate(-12deg);
+    z-index: 2;
+}
+
+.culture-card--milk {
+    bottom: 0.3rem;
+    transform: translateX(-104%) rotate(-6deg);
+    z-index: 3;
+}
+
+.culture-card--pendet.is-featured {
+    bottom: 1.1rem;
+    width: clamp(11.2rem, 13.2vw, 12rem);
+    transform: translateX(-50%) rotate(0deg);
+    z-index: 7;
+}
+
+.culture-card--face {
+    bottom: 0.3rem;
+    transform: translateX(4%) rotate(6deg);
+    z-index: 4;
+}
+
+.culture-card--poster {
+    bottom: -0.55rem;
+    transform: translateX(60%) rotate(12deg);
+    z-index: 3;
+}
+
+.culture-card--house {
+    bottom: -2.15rem;
+    transform: translateX(114%) rotate(19deg);
+    z-index: 2;
+}
+
+.hero-route-link {
+    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.hero-route-link span:last-child {
+    font-size: 1.9rem;
+    line-height: 1;
+}
+
+.hero-scroll {
+    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.hero-scroll__mouse {
+    position: relative;
+    width: 1.1rem;
+    height: 1.8rem;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+}
+
+.hero-scroll__mouse::before {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 50%;
+    width: 0.2rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(-50%);
+}
+
+.overview-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 16rem;
+}
+
+.overview-card__title {
+    min-height: 3.75rem;
+}
+
+.overview-meta-card {
+    height: 100%;
+}
+
+.countdown-bridge {
+    position: relative;
+    z-index: 20;
+    margin-top: -4.5rem;
+}
+
+.countdown-bridge__card {
+    position: relative;
+}
+
+.countdown-unit {
+    min-height: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown-value {
+    position: relative;
+    height: 3.5rem;
+    overflow: hidden;
+}
+
+.countdown-digit {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    will-change: transform, opacity;
+}
+
 .hover-glow {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -306,24 +710,75 @@ button:focus-visible {
     transform: none !important;
 }
 
-[data-hero-scramble] {
-    display: inline;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    vertical-align: baseline;
-    line-height: inherit;
-}
-
-@media (min-width: 768px) {
-    [data-hero-scramble] {
-        display: block;
-        width: auto !important;
-    }
-}
-
 @media (max-width: 767px) {
     html {
         scroll-padding-top: 5.5rem;
+    }
+
+    .hero-premium__cloud--top {
+        left: -2rem;
+        top: 8rem;
+    }
+
+    .hero-premium__cloud--bottom {
+        right: -3rem;
+        bottom: 6rem;
+    }
+
+    .hero-culture-showcase {
+        display: flex;
+        align-items: stretch;
+        gap: 0.9rem;
+        min-height: auto;
+        margin-top: 0.5rem;
+        max-width: 25rem;
+        padding: 0.4rem 1.1rem 1.2rem;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .hero-culture-showcase::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-culture-showcase__glow {
+        display: none;
+    }
+
+    .culture-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        flex: 0 0 10.5rem;
+        width: 10.5rem;
+        max-width: 10.5rem;
+        scroll-snap-align: center;
+    }
+
+    .culture-card--reog,
+    .culture-card--angklung,
+    .culture-card--milk,
+    .culture-card--pendet.is-featured,
+    .culture-card--face,
+    .culture-card--poster,
+    .culture-card--house {
+        bottom: auto;
+        transform: none;
+    }
+
+    .culture-card--pendet.is-featured {
+        width: 10.5rem;
+    }
+
+    .culture-card__frame {
+        min-height: 13.5rem;
+    }
+
+    .countdown-bridge {
+        margin-top: -3.5rem;
     }
 
     .route-map-canvas {
@@ -359,11 +814,10 @@ button:focus-visible {
         min-height: auto;
     }
 
-    [data-hero-scramble] {
-        display: inline;
-        white-space: normal;
-        overflow-wrap: anywhere;
-        width: auto !important;
-        line-height: inherit;
+}
+
+@media (max-width: 1023px) {
+    .hero-culture-showcase {
+        min-height: 21rem;
     }
 }

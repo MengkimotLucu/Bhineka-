@@ -6,7 +6,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const REGISTRATION_ENABLED = false;
-    const ENABLE_HERO_SCRAMBLE = true;
 
     // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
     const navbar = document.getElementById('navbar-container');
@@ -14,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const registrationButtons = document.querySelectorAll('[data-registration-cta]');
-    const heroScrambleTarget = document.querySelector('[data-hero-scramble]');
-    const desktopScrambleQuery = window.matchMedia('(min-width: 1280px)');
-    const scrambleText = heroScrambleTarget ? heroScrambleTarget.textContent.trim() : '';
     const entertainmentSection = document.getElementById('entertainment');
     const entertainmentVisuals = document.querySelectorAll('[data-entertainment-visual]');
+    const heroShowcase = document.getElementById('hero-culture-showcase');
+    const cultureCards = document.querySelectorAll('[data-culture-card]');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     registrationButtons.forEach(button => {
         const openLabel = button.dataset.openLabel || button.textContent.trim();
@@ -54,31 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
     }
 
-    if (ENABLE_HERO_SCRAMBLE && heroScrambleTarget && window.gsap && window.ScrambleTextPlugin && desktopScrambleQuery.matches) {
-        gsap.registerPlugin(ScrambleTextPlugin);
-
-        const playHeroScramble = () => {
-            gsap.fromTo(heroScrambleTarget,
-                { opacity: 1 },
-                {
-                    duration: 1.8,
-                    scrambleText: {
-                        text: scrambleText,
-                        chars: 'upperCase',
-                        revealDelay: 0.18,
-                        speed: 0.45,
-                        tweenLength: false,
-                    },
-                    ease: 'none',
-                }
-            );
-        };
-
-        playHeroScramble();
-        // gsap.delayedCall(4.5, function repeatScramble() {
-        //     playHeroScramble();
-        //     gsap.delayedCall(4.5, repeatScramble);
-        // });
+    if (heroShowcase && cultureCards.length > 0) {
+        cultureCards.forEach((card) => {
+            card.style.opacity = '1';
+        });
     }
 
     if (entertainmentVisuals.length > 0 && window.gsap && window.ScrollTrigger) {
@@ -177,6 +155,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. COUNTDOWN TIMER (Targets: 12 July 2026 05:00:00 AM UTC+7)
     const targetDate = new Date('2026-07-12T05:00:00+07:00').getTime();
+    const countdownState = new Map();
+
+    function setCountdownValue(element, value, animate = true) {
+        if (!element) return;
+
+        const nextValue = value.toString();
+        const currentValue = countdownState.get(element.id);
+
+        if (currentValue === nextValue) return;
+
+        if (!window.gsap || prefersReducedMotion || !animate || currentValue == null) {
+            element.textContent = nextValue;
+            countdownState.set(element.id, nextValue);
+            return;
+        }
+
+        const wrapper = element.parentElement;
+        if (!wrapper) {
+            element.textContent = nextValue;
+            countdownState.set(element.id, nextValue);
+            return;
+        }
+
+        const outgoing = element.cloneNode(true);
+        outgoing.removeAttribute('id');
+        outgoing.textContent = currentValue;
+        wrapper.appendChild(outgoing);
+
+        element.textContent = nextValue;
+
+        gsap.set(element, { yPercent: 100, opacity: 0 });
+        gsap.set(outgoing, { yPercent: 0, opacity: 1 });
+
+        const tl = gsap.timeline({
+            onComplete: () => {
+                outgoing.remove();
+            },
+        });
+
+        tl.to(outgoing, {
+            yPercent: -100,
+            opacity: 0,
+            duration: 0.45,
+            ease: 'power2.out',
+        }, 0);
+
+        tl.to(element, {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.45,
+            ease: 'power2.out',
+        }, 0);
+
+        countdownState.set(element.id, nextValue);
+    }
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -187,10 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const mEl = document.getElementById('timer-minutes');
         const sEl = document.getElementById('timer-seconds');
         if (difference <= 0) {
-            if (dEl) dEl.innerText = '00';
-            if (hEl) hEl.innerText = '00';
-            if (mEl) mEl.innerText = '00';
-            if (sEl) sEl.innerText = '00';
+            setCountdownValue(dEl, '00');
+            setCountdownValue(hEl, '00');
+            setCountdownValue(mEl, '00');
+            setCountdownValue(sEl, '00');
             
             const messageEl = document.getElementById('timer-message');
             if (messageEl) {
@@ -205,10 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        if (dEl) dEl.innerText = days.toString().padStart(2, '0');
-        if (hEl) hEl.innerText = hours.toString().padStart(2, '0');
-        if (mEl) mEl.innerText = minutes.toString().padStart(2, '0');
-        if (sEl) sEl.innerText = seconds.toString().padStart(2, '0');
+        setCountdownValue(dEl, days.toString().padStart(2, '0'));
+        setCountdownValue(hEl, hours.toString().padStart(2, '0'));
+        setCountdownValue(mEl, minutes.toString().padStart(2, '0'));
+        setCountdownValue(sEl, seconds.toString().padStart(2, '0'));
     }
 
     // Run immediately and then every second
