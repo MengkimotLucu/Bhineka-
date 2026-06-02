@@ -528,70 +528,68 @@
             </div>
 
             <!-- Podium Prize Details -->
-            <div class="bg-brandCream rounded-2xl p-6 sm:p-10 border border-orange-200 shadow-lg">
-                <h3 class="font-heading text-3xl font-bold text-brandRed mb-6 uppercase text-center sm:text-left">DETAIL
-                    HADIAH PODIUM JUARA</h3>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full text-sm">
-                        <thead>
-                            <tr class="border-b border-orange-200">
-                                <th
-                                    class="px-6 py-4 text-left font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    KLASIFIKASI KATEGORI</th>
-                                <th
-                                    class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    JUARA 1</th>
-                                <th
-                                    class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    JUARA 2</th>
-                                <th
-                                    class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    JUARA 3</th>
-                                <th
-                                    class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    JUARA 4</th>
-                                <th
-                                    class="px-6 py-4 text-center font-bold text-brandDark uppercase tracking-wider text-xs">
-                                    JUARA 5</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-orange-100 bg-white">
-                            <tr class="hover:bg-orange-50 bg-opacity-80 transition-colors">
-                                <td class="px-6 py-4 font-bold text-brandDark">10K Open (M/F)</td>
-                                <td class="px-6 py-4 text-center font-bold text-brandRed">Rp 5.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 4.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 3.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.500.000</td>
-                            </tr>
-                            <tr class="hover:bg-orange-50 bg-opacity-80 transition-colors">
-                                <td class="px-6 py-4 font-bold text-brandDark">10K Master (M/F)</td>
-                                <td class="px-6 py-4 text-center font-bold text-brandRed">Rp 5.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 4.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 3.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.000.000</td>
-                            </tr>
-                            <tr class="hover:bg-orange-50 bg-opacity-80 transition-colors">
-                                <td class="px-6 py-4 font-bold text-brandDark">5K Open (M/F)</td>
-                                <td class="px-6 py-4 text-center font-bold text-brandRed">Rp 3.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.000.000</td>
-                            </tr>
-                            <tr class="hover:bg-orange-50 bg-opacity-80 transition-colors">
-                                <td class="px-6 py-4 font-bold text-brandDark">5K Master (M/F)</td>
-                                <td class="px-6 py-4 text-center font-bold text-brandRed">Rp 3.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 2.000.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.500.000</td>
-                                <td class="px-6 py-4 text-center text-brandDark font-medium">Rp 1.000.000</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="podium-awards mt-6 overflow-hidden rounded-[2.5rem] px-6 py-14 md:px-10 md:py-16">
+                <div class="mx-auto max-w-3xl text-center text-white">
+                    <p class="text-sm font-extrabold uppercase tracking-[0.34em] text-brandGold">BHINNEKA RUN 2026</p>
+                    <h3 class="mt-4 font-heading text-4xl font-extrabold md:text-5xl">Podium &amp; Awards</h3>
+                    <p class="mt-4 text-base font-medium leading-8 text-white md:text-lg">
+                        Raih podium terbaik dan menangkan hadiah jutaan rupiah di setiap kategori lomba.
+                    </p>
                 </div>
 
+                <div class="podium-stack" id="podium-stack">
+                    <article class="podium-card podium-card--master-10k" data-prize-card>
+                        <div class="podium-card__ornament" aria-hidden="true"></div>
+                        <div class="podium-card__pill">10K Master</div>
+                        <h4 class="podium-card__title">10K Master (M/F)</h4>
+                        <div class="podium-card__list">
+                            <div class="podium-card__row"><span>Juara 1</span><strong>Rp 5.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 2</span><strong>Rp 4.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 3</span><strong>Rp 3.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 4</span><strong>Rp 2.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 5</span><strong>Rp 1.000.000</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="podium-card podium-card--featured" data-prize-card>
+                        <div class="podium-card__ornament" aria-hidden="true"></div>
+                        <div class="podium-card__pill podium-card__pill--gold">Featured Category</div>
+                        <h4 class="podium-card__title">10K Open (M/F)</h4>
+                        <div class="podium-card__list">
+                            <div class="podium-card__row"><span>Juara 1</span><strong>Rp 5.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 2</span><strong>Rp 4.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 3</span><strong>Rp 3.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 4</span><strong>Rp 2.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 5</span><strong>Rp 1.500.000</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="podium-card podium-card--open-5k" data-prize-card>
+                        <div class="podium-card__ornament" aria-hidden="true"></div>
+                        <div class="podium-card__pill">5K Open</div>
+                        <h4 class="podium-card__title">5K Open (M/F)</h4>
+                        <div class="podium-card__list">
+                            <div class="podium-card__row"><span>Juara 1</span><strong>Rp 3.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 2</span><strong>Rp 2.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 3</span><strong>Rp 2.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 4</span><strong>Rp 1.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 5</span><strong>Rp 1.000.000</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="podium-card podium-card--master-5k" data-prize-card>
+                        <div class="podium-card__ornament" aria-hidden="true"></div>
+                        <div class="podium-card__pill">5K Master</div>
+                        <h4 class="podium-card__title">5K Master (M/F)</h4>
+                        <div class="podium-card__list">
+                            <div class="podium-card__row"><span>Juara 1</span><strong>Rp 3.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 2</span><strong>Rp 2.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 3</span><strong>Rp 2.000.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 4</span><strong>Rp 1.500.000</strong></div>
+                            <div class="podium-card__row"><span>Juara 5</span><strong>Rp 1.000.000</strong></div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
