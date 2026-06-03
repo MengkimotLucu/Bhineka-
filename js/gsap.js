@@ -93,10 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: document.getElementById('route'),
                 elements: document.querySelectorAll('.tab-btn'),
             },
-            {
-                trigger: document.querySelector('footer'),
-                elements: document.querySelectorAll('footer .max-w-7xl > *'),
-            },
         ];
 
         groups.forEach((group) => {
@@ -193,7 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const animatedSections = document.querySelectorAll('section:not(#home), footer');
+    function animateSectionDividers() {
+        const dividers = document.querySelectorAll('.section-divider--left');
+        if (!dividers.length) return;
+
+        gsap.set(dividers, {
+            scaleX: 0,
+        });
+
+        dividers.forEach((divider) => {
+            gsap.to(divider, {
+                scaleX: 1,
+                duration: 0.9,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: divider,
+                    start: 'top 86%',
+                    once: true,
+                },
+            });
+        });
+    }
+
+    const animatedSections = document.querySelectorAll('section:not(#home):not(#kategori)');
     animatedSections.forEach((section) => {
         revealSectionShell(section);
         revealRows(section);
@@ -215,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bindRouteSwitchAnimation();
     bindFaqBounce();
     initParallaxAccents();
+    animateSectionDividers();
 
     ScrollTrigger.refresh();
 });
