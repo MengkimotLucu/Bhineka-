@@ -460,4 +460,158 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 6. FLOATING SCROLL TO TOP
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    const cloudBurstLayer = document.getElementById('cloud-burst-layer');
+    let cloudTapCount = 0;
+    let cloudTapTimer = null;
+
+    function createRainCloud() {
+        if (!cloudBurstLayer) return;
+
+        const sizePresets = [
+            { size: 22, mobile: 15 },
+            { size: 18, mobile: 12.5 },
+            { size: 14.5, mobile: 10 },
+            { size: 11, mobile: 7.4 },
+            { size: 8, mobile: 5.4 },
+            { size: 5.8, mobile: 4 },
+        ];
+
+        const preset = sizePresets[Math.floor(Math.random() * sizePresets.length)];
+        const left = 4 + Math.random() * 92;
+        const topOffset = -(Math.random() * 18 + 4);
+        const travel = 54 + Math.random() * 20;
+        const duration = 1650 + Math.random() * 550;
+        const drift = (Math.random() * 18 - 9).toFixed(2);
+
+        const cloud = document.createElement('div');
+        cloud.className = 'cloud-burst';
+        cloud.style.setProperty('--cloud-left', `${left}%`);
+        cloud.style.setProperty('--cloud-size', `${preset.size}rem`);
+        cloud.style.setProperty('--cloud-size-mobile', `${preset.mobile}rem`);
+        cloud.style.setProperty('--cloud-travel', `${travel}vh`);
+        cloud.style.setProperty('--cloud-duration', `${duration}ms`);
+        cloud.style.setProperty('--cloud-start-top', `${topOffset}rem`);
+        cloud.style.setProperty('--cloud-drift', `${drift}vw`);
+
+        const image = document.createElement('img');
+        image.src = 'assets/awankinton.svg';
+        image.alt = '';
+        image.setAttribute('aria-hidden', 'true');
+
+        cloud.appendChild(image);
+        cloudBurstLayer.appendChild(cloud);
+
+        window.setTimeout(() => {
+            cloud.remove();
+        }, Math.ceil(duration + 220));
+    }
+
+    function launchCloudBurst() {
+        if (!cloudBurstLayer) return;
+
+        const rainDuration = 3000;
+        const rainInterval = 180;
+        const startedAt = Date.now();
+
+        const spawnBatch = () => {
+            const batchSize = 1 + Math.floor(Math.random() * 2);
+            Array.from({ length: batchSize }).forEach(() => createRainCloud());
+
+            if (Date.now() - startedAt < rainDuration) {
+                window.setTimeout(spawnBatch, rainInterval);
+            }
+        };
+
+        spawnBatch();
+    }
+
+    function createPassingCloud() {
+        if (!cloudBurstLayer) return;
+
+        const sizePresets = [
+            { size: 22, mobile: 15 },
+            { size: 18, mobile: 12.5 },
+            { size: 14.5, mobile: 10 },
+            { size: 11, mobile: 7.4 },
+            { size: 8, mobile: 5.4 },
+            { size: 5.8, mobile: 4 },
+        ];
+
+        const preset = sizePresets[Math.floor(Math.random() * sizePresets.length)];
+        const fromLeft = Math.random() > 0.5;
+        const top = 8 + Math.random() * 70;
+        const duration = 4000;
+        const driftY = (Math.random() * 8 - 4).toFixed(2);
+        const opacity = (0.22 + Math.random() * 0.42).toFixed(2);
+
+        const cloud = document.createElement('div');
+        cloud.className = `cloud-burst cloud-burst--cross ${fromLeft ? 'cloud-burst--ltr' : 'cloud-burst--rtl'}`;
+        cloud.style.setProperty('--cloud-size', `${preset.size}rem`);
+        cloud.style.setProperty('--cloud-size-mobile', `${preset.mobile}rem`);
+        cloud.style.setProperty('--cloud-cross-top', `${top}%`);
+        cloud.style.setProperty('--cloud-duration', `${duration}ms`);
+        cloud.style.setProperty('--cloud-cross-drift-y', `${driftY}vh`);
+        cloud.style.setProperty('--cloud-cross-visual-opacity', opacity);
+
+        const image = document.createElement('img');
+        image.src = 'assets/awankinton.svg';
+        image.alt = '';
+        image.setAttribute('aria-hidden', 'true');
+
+        cloud.appendChild(image);
+        cloudBurstLayer.appendChild(cloud);
+
+        window.setTimeout(() => {
+            cloud.remove();
+        }, Math.ceil(duration + 180));
+    }
+
+    function launchCloudCrossBurst() {
+        if (!cloudBurstLayer) return;
+
+        const crossDuration = 4000;
+        const crossInterval = 240;
+        const startedAt = Date.now();
+
+        const spawnWave = () => {
+            const batchSize = 1 + Math.floor(Math.random() * 2);
+            Array.from({ length: batchSize }).forEach(() => createPassingCloud());
+
+            if (Date.now() - startedAt < crossDuration) {
+                const nextInterval = crossInterval + Math.random() * 180;
+                window.setTimeout(spawnWave, nextInterval);
+            }
+        };
+
+        spawnWave();
+    }
+
+    if (scrollToTopButton) {
+        scrollToTopButton.addEventListener('click', () => {
+            cloudTapCount += 1;
+
+            if (cloudTapTimer) {
+                window.clearTimeout(cloudTapTimer);
+            }
+
+            cloudTapTimer = window.setTimeout(() => {
+                if (cloudTapCount >= 3) {
+                    launchCloudCrossBurst();
+                } else if (cloudTapCount === 2) {
+                    launchCloudBurst();
+                } else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                    });
+                }
+
+                cloudTapCount = 0;
+                cloudTapTimer = null;
+            }, 280);
+        });
+    }
 });

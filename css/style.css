@@ -1878,3 +1878,189 @@ button:focus-visible {
         min-height: 21rem;
     }
 }
+
+.scroll-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 45;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(214, 160, 76, 0.32);
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.42) 100%);
+    cursor: pointer;
+    backdrop-filter: blur(14px) saturate(130%);
+    filter: drop-shadow(0 18px 28px rgba(117, 25, 20, 0.22));
+}
+
+.scroll-to-top::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 50%;
+    width: 72%;
+    height: 42%;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0) 72%);
+    opacity: 0.92;
+    pointer-events: none;
+}
+
+.scroll-to-top__icon {
+    display: block;
+    width: 76%;
+    height: auto;
+    pointer-events: none;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-4px);
+}
+
+.cloud-burst-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 44;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cloud-burst {
+    position: absolute;
+    top: var(--cloud-start-top, -8rem);
+    left: var(--cloud-left, 50%);
+    width: var(--cloud-size, 10rem);
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) scale(0.96);
+    animation: cloudRainDrop var(--cloud-duration, 1400ms) linear forwards;
+    will-change: transform, opacity;
+}
+
+.cloud-burst img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cloud-burst--cross {
+    top: var(--cloud-cross-top, 40%);
+    left: auto;
+    opacity: 0;
+    transform: translateY(0) scale(0.98);
+    animation: cloudCrossLtr var(--cloud-duration, 2000ms) linear forwards;
+}
+
+.cloud-burst--cross img {
+    opacity: var(--cloud-cross-visual-opacity, 0.42);
+}
+
+.cloud-burst--ltr {
+    left: -22rem;
+    right: auto;
+    animation-name: cloudCrossLtr;
+}
+
+.cloud-burst--rtl {
+    right: -22rem;
+    left: auto;
+    animation-name: cloudCrossRtl;
+}
+
+@keyframes cloudRainDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-3rem) scale(0.94);
+    }
+
+    10% {
+        opacity: 0.92;
+    }
+
+    35% {
+        opacity: 0.88;
+        transform: translateX(calc(-50% + (var(--cloud-drift, 0vw) * 0.35))) translateY(calc(var(--cloud-travel, 44vh) * 0.35)) scale(0.98);
+    }
+
+    70% {
+        opacity: 0.84;
+        transform: translateX(calc(-50% + (var(--cloud-drift, 0vw) * 0.78))) translateY(var(--cloud-travel, 44vh)) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(calc(-50% + var(--cloud-drift, 0vw))) translateY(calc(var(--cloud-travel, 44vh) + 6rem)) scale(1);
+    }
+}
+
+@keyframes cloudCrossLtr {
+    0% {
+        opacity: 0;
+        transform: translateX(0) translateY(0) scale(0.96);
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(58vw) translateY(calc(var(--cloud-cross-drift-y, 0vh) * 0.5)) scale(0.99);
+    }
+
+    88% {
+        opacity: 0.94;
+        transform: translateX(102vw) translateY(calc(var(--cloud-cross-drift-y, 0vh) * 0.88)) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(116vw) translateY(var(--cloud-cross-drift-y, 0vh)) scale(1.02);
+    }
+}
+
+@keyframes cloudCrossRtl {
+    0% {
+        opacity: 0;
+        transform: translateX(0) translateY(0) scale(0.96);
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-58vw) translateY(calc(var(--cloud-cross-drift-y, 0vh) * 0.5)) scale(0.99);
+    }
+
+    88% {
+        opacity: 0.94;
+        transform: translateX(-102vw) translateY(calc(var(--cloud-cross-drift-y, 0vh) * 0.88)) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-116vw) translateY(var(--cloud-cross-drift-y, 0vh)) scale(1.02);
+    }
+}
+
+@media (max-width: 767px) {
+    .scroll-to-top {
+        right: 0.75rem;
+        bottom: 5.6rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cloud-burst {
+        width: var(--cloud-size-mobile, 6.2rem);
+    }
+}
