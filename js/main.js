@@ -7,6 +7,82 @@
 document.addEventListener('DOMContentLoaded', () => {
     const REGISTRATION_ENABLED = false;
 
+    // Pricing Cards Data & Render
+    const ticketCategories = [
+        {
+            name: '3K',
+            price: 'Rp 75.000',
+            benefits: [
+                'Kategori Usia Open: minimal 13 tahun',
+                'Cut-Off Time (COT): 60 Menit',
+                'Finisher Medal (Bronze)',
+                'Jersey Peserta Premium'
+            ],
+            registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
+            openLabel: 'Daftar 3K',
+            closedLabel: 'Coming Soon'
+        },
+        {
+            name: '5K',
+            price: 'Rp 125.000',
+            benefits: [
+                'Kategori Usia Open: minimal 13 tahun',
+                'Kategori Usia Master: di atas 40 tahun',
+                'Cut-Off Time (COT): 90 Menit',
+                'Finisher Medal (Silver)',
+                'Jersey Peserta Premium',
+                'RFID Timing Chip Terintegrasi'
+            ],
+            registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
+            openLabel: 'Daftar 5K',
+            closedLabel: 'Coming Soon'
+        },
+        {
+            name: '10K',
+            price: 'Rp 150.000',
+            benefits: [
+                'Kategori Usia Open: minimal 13 tahun',
+                'Kategori Usia Master: di atas 40 tahun',
+                'Cut-Off Time (COT): 120 Menit',
+                'Finisher Medal (Gold)',
+                'Jersey Peserta Premium',
+                'RFID Timing Chip Terintegrasi'
+            ],
+            registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
+            openLabel: 'Daftar 10K',
+            closedLabel: 'Coming Soon'
+        }
+    ];
+
+    const pricingContainer = document.getElementById('pricing-cards-container');
+    if (pricingContainer) {
+        pricingContainer.innerHTML = ticketCategories.map(cat => {
+            const benefitsList = cat.benefits.map(benefit => `
+                            <li class="flex items-center gap-2">✓ ${benefit}</li>
+            `).join('');
+
+            return `
+                <div class="bg-brandCream rounded-2xl p-8 border border-orange-200 shadow-md flex flex-col justify-between hover-glow">
+                    <div class="space-y-4">
+                        <h3 class="font-heading text-4xl font-extrabold text-brandDark">${cat.name}</h3>
+                        <div class="pt-4 border-t border-orange-100">
+                            <span class="text-gray-400 text-xs block uppercase">Biaya Registrasi</span>
+                            <span class="font-heading text-4xl font-bold text-brandRed">${cat.price}</span>
+                        </div>
+                        <ul class="space-y-2 pt-4 text-sm text-gray-700">
+                            ${benefitsList}
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="${cat.registrationUrl}" target="_blank" rel="noopener noreferrer"
+                            data-registration-cta data-open-label="${cat.openLabel}" data-closed-label="${cat.closedLabel}"
+                            class="block w-full bg-brandRed hover:bg-red-800 text-white font-bold py-3 px-4 rounded-xl text-center transition-colors text-sm">Daftar ${cat.name}</a>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
     // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
     const navbar = document.getElementById('navbar-container');
     const sections = document.querySelectorAll('section[id]');
