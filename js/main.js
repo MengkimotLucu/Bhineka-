@@ -89,10 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const registrationButtons = document.querySelectorAll('[data-registration-cta]');
-    const entertainmentSection = document.getElementById('entertainment');
-    const entertainmentVisuals = document.querySelectorAll('[data-entertainment-visual]');
-    const heroShowcase = document.getElementById('hero-culture-showcase');
-    const cultureCards = document.querySelectorAll('[data-culture-card]');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     registrationButtons.forEach(button => {
@@ -124,42 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
-    if (window.gsap && window.ScrollTrigger) {
-        gsap.registerPlugin(ScrollTrigger);
-    }
-
-    if (heroShowcase && cultureCards.length > 0) {
-        cultureCards.forEach((card) => {
-            card.style.opacity = '1';
-        });
-    }
-
-    if (entertainmentVisuals.length > 0 && window.gsap && window.ScrollTrigger) {
-        gsap.set(entertainmentVisuals, {
-            yPercent: 95,
-        });
-
-        entertainmentVisuals.forEach((visual) => {
-            const card = visual.closest('.entertainment-card');
-            if (!card) return;
-
-            gsap.to(visual, {
-                yPercent: -18,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 92%',
-                    end: 'top 38%',
-                    scrub: 0.9,
-                },
-            });
-        });
-
-        if (entertainmentSection) {
-            ScrollTrigger.refresh();
-        }
-    }
 
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;

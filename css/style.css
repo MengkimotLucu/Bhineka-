@@ -165,6 +165,14 @@ button:focus-visible {
     position: relative;
 }
 
+.hero-event-badge {
+    min-width: min(26rem, calc(100vw - 2rem));
+    padding-inline: clamp(1.5rem, 4vw, 3.5rem);
+    font-size: clamp(1rem, 0.9rem + 0.45vw, 1.28rem);
+    letter-spacing: clamp(0.28em, 0.22em + 0.3vw, 0.46em);
+    white-space: nowrap;
+}
+
 .hero-primary-cta {
     background: linear-gradient(135deg, #f4c957 0%, #d4af37 48%, #f8e2a2 100%);
     box-shadow: 0 22px 44px -24px rgba(20, 8, 10, 0.9);
@@ -193,7 +201,7 @@ button:focus-visible {
     min-height: 18rem;
     width: 100%;
     max-width: 86rem;
-    margin: 0.2rem auto 0;
+    margin: 1.75rem auto 6.25rem;
 }
 
 .hero-culture-showcase__glow {
@@ -403,6 +411,20 @@ button:focus-visible {
     bottom: -2.15rem;
     transform: translateX(114%) rotate(19deg);
     z-index: 2;
+}
+
+@media (min-width: 1024px) {
+    .hero-culture-showcase {
+        min-height: 22rem;
+    }
+
+    .culture-card {
+        width: clamp(12.75rem, 15vw, 14.5rem);
+    }
+
+    .culture-card--pendet.is-featured {
+        width: clamp(13.5rem, 16vw, 15.25rem);
+    }
 }
 
 .hero-route-link {
@@ -884,7 +906,7 @@ button:focus-visible {
         align-items: stretch;
         gap: 0.9rem;
         min-height: auto;
-        margin-top: 0.5rem;
+        margin: 1.25rem auto 2.5rem;
         max-width: 25rem;
         padding: 0.4rem 1.1rem 1.2rem;
         overflow-x: auto;
