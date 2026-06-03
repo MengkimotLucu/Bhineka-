@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pricing Cards Data & Render
     const ticketCategories = [
         {
+            key: '3k',
             name: '3K',
             price: 'Rp 75.000',
             benefits: [
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             closedLabel: 'Coming Soon'
         },
         {
+            key: '5k',
             name: '5K',
             price: 'Rp 125.000',
             benefits: [
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             closedLabel: 'Coming Soon'
         },
         {
+            key: '10k',
             name: '10K',
             price: 'Rp 150.000',
             benefits: [
@@ -56,46 +59,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pricingContainer = document.getElementById('pricing-cards-container');
     if (pricingContainer) {
-        pricingContainer.innerHTML = ticketCategories.map(cat => {
-            const benefitsList = cat.benefits.map(benefit => `
-                            <li class="flex items-center gap-2">✓ ${benefit}</li>
-            `).join('');
+        pricingContainer.innerHTML = ticketCategories.map((cat, index) => {
+            const stateClass = index === 0 ? 'pricing-card pricing-card--active' : 'pricing-card';
+            const cardClass = index === 1 ? `${stateClass} pricing-card--featured` : stateClass;
 
             return `
-                <div class="bg-brandCream rounded-2xl p-8 border border-orange-200 shadow-md flex flex-col justify-between hover-glow">
-                    <div class="space-y-4">
-                        <h3 class="font-heading text-4xl font-extrabold text-brandDark">${cat.name}</h3>
-                        <div class="pt-4 border-t border-orange-100">
-                            <span class="text-gray-400 text-xs block uppercase">Biaya Registrasi</span>
-                            <span class="font-heading text-4xl font-bold text-brandRed">${cat.price}</span>
+                <article class="${cardClass}" data-kategori-card="${cat.key}">
+                    <div class="space-y-3">
+                        <h3 class="font-heading text-4xl font-extrabold">${cat.name}</h3>
+                        <div class="pricing-card__price">
+                            <span class="pricing-card__price-label">Biaya Registrasi</span>
+                            <strong class="pricing-card__price-value">${cat.price}</strong>
                         </div>
-                        <ul class="space-y-2 pt-4 text-sm text-gray-700">
-                            ${benefitsList}
-                        </ul>
                     </div>
-                    <div class="pt-8">
-                        <a href="${cat.registrationUrl}" target="_blank" rel="noopener noreferrer"
-                            data-registration-cta data-open-label="${cat.openLabel}" data-closed-label="${cat.closedLabel}"
-                            class="block w-full bg-brandRed hover:bg-red-800 text-white font-bold py-3 px-4 rounded-xl text-center transition-colors text-sm">Daftar ${cat.name}</a>
-                    </div>
-                </div>
+                </article>
             `;
         }).join('');
     }
 
-    // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
-    const navbar = document.getElementById('navbar-container');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    const registrationButtons = document.querySelectorAll('[data-registration-cta]');
-    const entertainmentSection = document.getElementById('entertainment');
-    const entertainmentVisuals = document.querySelectorAll('[data-entertainment-visual]');
-    const heroShowcase = document.getElementById('hero-culture-showcase');
-    const cultureCards = document.querySelectorAll('[data-culture-card]');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const kategoriCopyLabel = document.getElementById('kategori-copy-label');
+    const kategoriCopyDesc = document.getElementById('kategori-copy-desc');
+    const kategoriCopyCta = document.getElementById('kategori-copy-cta');
+    const kategoriCards = document.querySelectorAll('[data-kategori-card]');
 
-    registrationButtons.forEach(button => {
+    function syncRegistrationButtonState(button) {
+        if (!button) return;
+
         const openLabel = button.dataset.openLabel || button.textContent.trim();
         const closedLabel = button.dataset.closedLabel || 'Coming Soon';
         const originalHref = button.getAttribute('href');
@@ -114,52 +103,76 @@ document.addEventListener('DOMContentLoaded', () => {
             button.removeAttribute('aria-disabled');
             button.removeAttribute('tabindex');
         } else {
-            button.removeAttribute('href');
+            if (button.dataset.registrationHref) {
+                button.setAttribute('href', button.dataset.registrationHref);
+            }
             button.textContent = closedLabel;
             button.classList.add('registration-cta-disabled');
             button.setAttribute('aria-disabled', 'true');
             button.setAttribute('tabindex', '-1');
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-            });
         }
+    }
+
+    function renderKategoriCopy(category) {
+        if (!category || !kategoriCopyDesc) return;
+
+        const benefitItems = category.benefits.map((benefit) => `
+            <li>✓ ${benefit}</li>
+        `).join('');
+
+        kategoriCopyDesc.innerHTML = `
+            <ul class="kategori-copy__benefits">
+                ${benefitItems}
+            </ul>
+        `;
+
+        if (kategoriCopyCta) {
+            kategoriCopyCta.setAttribute('href', category.registrationUrl);
+            kategoriCopyCta.dataset.openLabel = category.openLabel;
+            kategoriCopyCta.dataset.closedLabel = category.closedLabel;
+            kategoriCopyCta.dataset.registrationHref = category.registrationUrl;
+            syncRegistrationButtonState(kategoriCopyCta);
+        }
+    }
+
+    renderKategoriCopy(ticketCategories[0]);
+
+    kategoriCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            const key = card.getAttribute('data-kategori-card');
+            const category = ticketCategories.find((item) => item.key === key);
+            if (!category) return;
+
+            kategoriCards.forEach((item) => {
+                item.classList.remove('pricing-card--active');
+            });
+
+            card.classList.add('pricing-card--active');
+
+            if (kategoriCopyLabel) {
+                kategoriCopyLabel.textContent = `Kategori ${category.name}`;
+            }
+
+            renderKategoriCopy(category);
+        });
     });
 
-    if (window.gsap && window.ScrollTrigger) {
-        gsap.registerPlugin(ScrollTrigger);
-    }
+    // 1. STICKY NAVBAR & ACTIVE LINK INDICATOR ON SCROLL
+    const navbar = document.getElementById('navbar-container');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const registrationButtons = document.querySelectorAll('[data-registration-cta]');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (heroShowcase && cultureCards.length > 0) {
-        cultureCards.forEach((card) => {
-            card.style.opacity = '1';
+    registrationButtons.forEach(button => {
+        syncRegistrationButtonState(button);
+        button.addEventListener('click', (event) => {
+            if (!REGISTRATION_ENABLED) {
+                event.preventDefault();
+            }
         });
-    }
-
-    if (entertainmentVisuals.length > 0 && window.gsap && window.ScrollTrigger) {
-        gsap.set(entertainmentVisuals, {
-            yPercent: 95,
-        });
-
-        entertainmentVisuals.forEach((visual) => {
-            const card = visual.closest('.entertainment-card');
-            if (!card) return;
-
-            gsap.to(visual, {
-                yPercent: -18,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 92%',
-                    end: 'top 38%',
-                    scrub: 0.9,
-                },
-            });
-        });
-
-        if (entertainmentSection) {
-            ScrollTrigger.refresh();
-        }
-    }
+    });
 
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;
@@ -351,6 +364,62 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetContent = document.getElementById(`route-${category}`);
             if (targetContent) {
                 targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // 4b. ROUTE PREVIEW TABS (Hero CTA Route Section)
+    const routePreviewButtons = document.querySelectorAll('[data-route-preview-btn]');
+    const routePreviewPanels = document.querySelectorAll('[data-route-preview-panel]');
+
+    routePreviewButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-route-preview-btn');
+
+            routePreviewButtons.forEach(btn => {
+                btn.classList.remove('route-preview-btn--active');
+                btn.classList.remove('bg-white', 'text-brandRed', 'shadow-md');
+                btn.classList.add('border', 'border-white/40', 'text-white');
+            });
+
+            button.classList.add('route-preview-btn--active');
+            button.classList.remove('border', 'border-white/40', 'text-white');
+            button.classList.add('bg-white', 'text-brandRed', 'shadow-md');
+
+            routePreviewPanels.forEach(panel => {
+                panel.classList.add('hidden');
+            });
+
+            const targetPanel = document.querySelector(`[data-route-preview-panel="${category}"]`);
+            if (targetPanel) {
+                targetPanel.classList.remove('hidden');
+            }
+        });
+    });
+
+    // 4c. ABOUT DESKTOP CARD SWITCHER
+    const tentangCards = document.querySelectorAll('[data-tentang-target]');
+    const tentangPanels = document.querySelectorAll('[data-tentang-panel]');
+
+    tentangCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            const target = card.getAttribute('data-tentang-target');
+
+            tentangCards.forEach((item) => {
+                item.classList.remove('tentang-card--active');
+            });
+
+            tentangPanels.forEach((panel) => {
+                panel.classList.add('hidden');
+                panel.removeAttribute('data-tentang-active');
+            });
+
+            card.classList.add('tentang-card--active');
+
+            const activePanel = document.querySelector(`[data-tentang-panel="${target}"]`);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+                activePanel.setAttribute('data-tentang-active', 'true');
             }
         });
     });
