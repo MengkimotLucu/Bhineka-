@@ -1144,6 +1144,13 @@ button:focus-visible {
         #fff;
 }
 
+.podium-card--cta-mobile {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin-top: 1.5rem;
+}
+
 .benefit-showcase {
     position: relative;
 }
