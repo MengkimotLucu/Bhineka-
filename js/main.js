@@ -127,14 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="kategori-copy__benefits">
                 ${benefitItems}
             </ul>
-            <div class="mt-5 p-4 rounded-2xl bg-[#FFF0F0] border border-[#FCD9D9]">
-                <p class="text-xs font-extrabold uppercase tracking-[0.12em] text-brandRed flex items-center gap-1.5">
-                    Dampak Kontribusi Sosial
-                </p>
-                <p class="mt-1.5 text-sm font-semibold text-gray-700 leading-relaxed">
-                    Setara dengan penyaluran: <strong class="text-brandDark">${category.donationConversion}</strong> untuk program sosial anak-anak.
-                </p>
-            </div>
         `;
 
         if (kategoriCopyCta) {
