@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Finisher Medal (Bronze)',
                 'Jersey Peserta Premium'
             ],
+            donationConversion: '2 Buku Edukasi, 1 Susu Kotak, dan 2 Buah Segar',
             registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
             openLabel: 'Daftar 3K',
             closedLabel: 'Coming Soon'
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Jersey Peserta Premium',
                 'RFID Timing Chip Terintegrasi'
             ],
+            donationConversion: '3 Buku Edukasi, 2 Susu Kotak, dan 4 Buah Segar',
             registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
             openLabel: 'Daftar 5K',
             closedLabel: 'Coming Soon'
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Jersey Peserta Premium',
                 'RFID Timing Chip Terintegrasi'
             ],
+            donationConversion: '4 Buku Edukasi, 2 Susu Kotak, dan 4 Buah Segar',
             registrationUrl: 'https://dev.dtiketin.com/events/bhinneka-run',
             openLabel: 'Daftar 10K',
             closedLabel: 'Coming Soon'
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="space-y-3">
                         <h3 class="font-heading text-4xl font-extrabold">${cat.name}</h3>
                         <div class="pricing-card__price">
-                            <span class="pricing-card__price-label">Biaya Registrasi</span>
+                            <span class="pricing-card__price-label">Kontribusi Sosial</span>
                             <strong class="pricing-card__price-value">${cat.price}</strong>
                         </div>
                     </div>
@@ -124,6 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="kategori-copy__benefits">
                 ${benefitItems}
             </ul>
+            <div class="mt-5 p-4 rounded-2xl bg-[#FFF0F0] border border-[#FCD9D9]">
+                <p class="text-xs font-extrabold uppercase tracking-[0.12em] text-brandRed flex items-center gap-1.5">
+                    Dampak Kontribusi Sosial
+                </p>
+                <p class="mt-1.5 text-sm font-semibold text-gray-700 leading-relaxed">
+                    Setara dengan penyaluran: <strong class="text-brandDark">${category.donationConversion}</strong> untuk program sosial anak-anak.
+                </p>
+            </div>
         `;
 
         if (kategoriCopyCta) {
@@ -221,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('hidden');
             const isOpen = !mobileMenu.classList.contains('hidden');
             menuBtn.setAttribute('aria-expanded', isOpen.toString());
-            
+
             // Toggle hamburger icon animation
             const pathElement = menuBtn.querySelector('svg path');
             if (isOpen) {
@@ -313,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setCountdownValue(hEl, '00');
             setCountdownValue(mEl, '00');
             setCountdownValue(sEl, '00');
-            
+
             const messageEl = document.getElementById('timer-message');
             if (messageEl) {
                 messageEl.innerText = 'EVENT SEDANG BERLANGSUNG ATAU SUDAH SELESAI';
