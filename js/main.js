@@ -535,20 +535,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!cloudBurstLayer) return;
 
         const sizePresets = [
-            { size: 22, mobile: 15 },
-            { size: 18, mobile: 12.5 },
-            { size: 14.5, mobile: 10 },
-            { size: 11, mobile: 7.4 },
-            { size: 8, mobile: 5.4 },
-            { size: 5.8, mobile: 4 },
+            { size: 42, mobile: 28 },
+            { size: 36, mobile: 24 },
+            { size: 30, mobile: 20 },
+            { size: 24, mobile: 16 },
         ];
 
         const preset = sizePresets[Math.floor(Math.random() * sizePresets.length)];
         const fromLeft = Math.random() > 0.5;
         const top = 8 + Math.random() * 70;
-        const duration = 4000;
+        const duration = 7000;
         const driftY = (Math.random() * 8 - 4).toFixed(2);
-        const opacity = (0.22 + Math.random() * 0.42).toFixed(2);
+        const opacity = (0.72 + Math.random() * 0.28).toFixed(2);
 
         const cloud = document.createElement('div');
         cloud.className = `cloud-burst cloud-burst--cross ${fromLeft ? 'cloud-burst--ltr' : 'cloud-burst--rtl'}`;
@@ -575,16 +573,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function launchCloudCrossBurst() {
         if (!cloudBurstLayer) return;
 
-        const crossDuration = 4000;
-        const crossInterval = 240;
+        const crossDuration = 7000;
+        const crossInterval = 650;
         const startedAt = Date.now();
 
         const spawnWave = () => {
-            const batchSize = 1 + Math.floor(Math.random() * 2);
+            const batchSize = 1;
             Array.from({ length: batchSize }).forEach(() => createPassingCloud());
 
             if (Date.now() - startedAt < crossDuration) {
-                const nextInterval = crossInterval + Math.random() * 180;
+                const nextInterval = crossInterval + Math.random() * 250;
                 window.setTimeout(spawnWave, nextInterval);
             }
         };
@@ -601,10 +599,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             cloudTapTimer = window.setTimeout(() => {
-                if (cloudTapCount >= 3) {
+                if (cloudTapCount >= 2) {
                     launchCloudCrossBurst();
-                } else if (cloudTapCount === 2) {
-                    launchCloudBurst();
                 } else {
                     window.scrollTo({
                         top: 0,

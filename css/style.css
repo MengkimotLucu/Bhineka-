@@ -1959,7 +1959,7 @@ button:focus-visible {
 }
 
 .cloud-burst--cross img {
-    opacity: var(--cloud-cross-visual-opacity, 0.42);
+    opacity: var(--cloud-cross-visual-opacity, 0.72);
 }
 
 .cloud-burst--ltr {
